@@ -19,8 +19,10 @@ int main(){
     std::string name;
 
     std::cout<<"Enter your name and the age "<<std::endl;
-    std::cin>>name;
+    std::getline(std::cin,name);//this line use to get a full line as a sstring eg:Kunal suntosh parkar
+    std::cin>>name;//this line just take a one word
     std::cin>>age1;
+    //also write as std::cin>>name>>age1;
 
     std::cout<<"Your name is "<<name<<" and your age is "<<age1<<std::endl;
     return 0;
