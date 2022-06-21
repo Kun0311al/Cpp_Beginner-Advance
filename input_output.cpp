@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 int main(){
     //Printing data
     std::cout<<"this is for input and output"<<std::endl;
@@ -12,5 +13,16 @@ int main(){
 
     //this is use to showcase log message
     std::clog<<"log message: something happen"<<std::endl;
+
+    //this is taking input from user and give the output
+    int age1;
+    std::string name;
+
+    std::cout<<"Enter your name and the age "<<std::endl;
+    std::cin>>name;
+    std::cin>>age1;
+
+    std::cout<<"Your name is "<<name<<" and your age is "<<age1<<std::endl;
+    return 0;
 
 }
