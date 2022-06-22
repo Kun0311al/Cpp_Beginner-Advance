@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 int main(){
     int A = 2 ; //int use to store integer value in it but complete number only 
     char B = 'A'; //char is use to store charecters in it 
@@ -9,6 +10,7 @@ int main(){
     auto F = false; //auto is auto define the type of value
     auto G = 18; 
     long H = 8.9743847856364637364;// long is use to store the long fractional number
+    std::string I = "Kunal";
     std::cout<<"1 : "<<A<<std::endl;
     std::cout<<"2 : "<<B<<std::endl;
     std::cout<<"3 : "<<C<<std::endl;
@@ -17,4 +19,5 @@ int main(){
     std::cout<<"6 : "<<F<<std::endl;
     std::cout<<"7 : "<<G<<std::endl;
     std::cout<<"8 : "<<H<<std::endl;
+    std::cout<<"9 : "<<I<<std::endl;
 }
