@@ -1,7 +1,7 @@
 #include<iostream>
 #include<iomanip> //std::setw(value) is include in this file
 int main(){
-    
+//unordered data 
     std::cout<<std::endl;
     std::cout<<"Unordered Data"<<std::endl;
     std::cout<<"Kunal "<< "Parkar "<<"19"<<std::endl;
@@ -10,7 +10,7 @@ int main(){
     std::cout<<"Ruchita "<< "Sabale "<<"21"<<std::endl;
     std::cout<<"Shraddha "<< "Singh "<<"20"<<std::endl;
     std::cout<<"Shrikant "<< "Sabbani "<<"21"<<std::endl;
-
+//order data in default side
     std::cout<<std::endl;
     std::cout<<"ordered Data"<<std::endl;
     std::cout<<std::setw(10)<<"First Name "<<std::setw(10)<< "Last Name "<<std::setw(5)<<"Age"<<std::endl;
@@ -20,7 +20,7 @@ int main(){
     std::cout<<std::setw(10)<<"Ruchita "<<std::setw(10)<< "Sabale "<<std::setw(5)<<"21"<<std::endl;
     std::cout<<std::setw(10)<<"Shraddha "<<std::setw(10)<< "Singh "<<std::setw(5)<<"20"<<std::endl;
     std::cout<<std::setw(10)<<"Shrikant "<<std::setw(10)<< "Sabbani "<<std::setw(5)<<"21"<<std::endl;
-
+//order data in default side in sapecific declaration
     std::cout<<std::endl;
     std::cout<<"ordered Data with width declaration"<<std::endl;
     int col_w = 13;//declaring the width 
@@ -32,7 +32,7 @@ int main(){
     std::cout<<std::setw(col_w)<<"Ruchita "<<std::setw(col_w)<< "Sabale "<<std::setw(col_w2)<<"21"<<std::endl;
     std::cout<<std::setw(col_w)<<"Shraddha "<<std::setw(col_w)<< "Singh "<<std::setw(col_w2)<<"20"<<std::endl;
     std::cout<<std::setw(col_w)<<"Shrikant "<<std::setw(col_w)<< "Sabbani "<<std::setw(col_w2)<<"21"<<std::endl;
-
+//ordered data in lieft side
     std::cout<<std::endl;
     std::cout<<"ordered Data in left side"<<std::endl;
     std::cout<<std::left;//right side is default
@@ -43,4 +43,14 @@ int main(){
     std::cout<<std::setw(col_w)<<"Ruchita "<<std::setw(col_w)<< "Sabale "<<std::setw(col_w2)<<"21"<<std::endl;
     std::cout<<std::setw(col_w)<<"Shraddha "<<std::setw(col_w)<< "Singh "<<std::setw(col_w2)<<"20"<<std::endl;
     std::cout<<std::setw(col_w)<<"Shrikant "<<std::setw(col_w)<< "Sabbani "<<std::setw(col_w2)<<"21"<<std::endl;
+    //in right and left justification the sing of the date is also go with the data at that side
+    //by using internal justification the sign and the data goes seprete sign goes left and data goes right
+    //sign (-,+)
+//internal justification
+    std::cout<<std::endl;
+    std::cout<<"Internal Justification"<<std::endl;
+    std::cout<<std::right;
+    std::cout<<std::setw(15)<<-12.4<<std::endl;
+    std::cout<<std::internal;
+    std::cout<<std::setw(15)<<-12.4<<std::endl;
 }
