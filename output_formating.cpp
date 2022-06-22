@@ -1,5 +1,5 @@
 #include<iostream>
-#include<iomanip> //std::setw(value),std::stefill('any sign') is include in this file
+#include<iomanip> //std::setw(value),std::stefill('any sign'),std::showpos is include in this file
 int main(){
 //unordered data 
     std::cout<<std::endl;
@@ -66,4 +66,20 @@ int main(){
     std::cout<<std::setw(col_w)<<"Ruchita "<<std::setw(col_w)<< "Sabale "<<std::setw(col_w2)<<"21"<<std::endl;
     std::cout<<std::setw(col_w)<<"Shraddha "<<std::setw(col_w)<< "Singh "<<std::setw(col_w2)<<"20"<<std::endl;
     std::cout<<std::setw(col_w)<<"Shrikant "<<std::setw(col_w)<< "Sabbani "<<std::setw(col_w2)<<"21"<<std::endl;
+//to showing the possitive sign of the number
+    //std::showpos is use for it and cloasing this std::noshoepose is use
+    std::cout<<std::endl;
+    std::cout<<"show the positive sing also"<<std::endl;
+    int pos_no = 10;
+    int neg_no = -20;
+    std::cout<<"Pos_no: "<<pos_no<<std::endl;
+    std::cout<<"neg_no: "<<neg_no<<std::endl;
+    std::cout<<std::endl;
+    std::cout<<std::showpos;
+    std::cout<<"Pos_no: "<<pos_no<<std::endl;
+    std::cout<<"neg_no: "<<neg_no<<std::endl;
+    std::cout<<std::endl;
+    std::cout<<std::noshowpos;
+    std::cout<<"Pos_no: "<<pos_no<<std::endl;
+    std::cout<<"neg_no: "<<neg_no<<std::endl;
 }
