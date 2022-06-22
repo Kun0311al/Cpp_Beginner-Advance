@@ -36,4 +36,13 @@ int main(){
     std::cout<<"result6 display and the decrement: "<<Result6<<std::endl;
     std::cout<<"result7 increment and display: "<<Result7<<std::endl;
     std::cout<<"result8 decrement and display: "<<Result8<<std::endl;
+    //relational operator
+    int number1{20};
+    int number2{30};
+    std::cout<<std::boolalpha;
+    std::cout<<"Result < : "<<(number1<number2)<<std::endl;
+    std::cout<<"Result > : "<<(number1>number2)<<std::endl;
+    std::cout<<"Result <= : "<<(number1<=number2)<<std::endl;
+    std::cout<<"Result >= : "<<(number1>=number2)<<std::endl;
+    std::cout<<"Result == : "<<(number1==number2)<<std::endl;
 }
