@@ -43,7 +43,7 @@ int main(){
     int number1{20};
     int number2{30};
     std::cout<<"ans of boolean operators: "<<std::endl;
-    std::cout<<std::boolalpha;
+    std::cout<<std::boolalpha;//std::boolalpha is use to give output in true/false insteed of 1/0
     std::cout<<"Result < : "<<(number1<number2)<<std::endl;
     std::cout<<"Result > : "<<(number1>number2)<<std::endl;
     std::cout<<"Result <= : "<<(number1<=number2)<<std::endl;
