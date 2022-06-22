@@ -12,13 +12,13 @@ int main(){
     int Result6 = num_2--;
     int Result7 = --num_1;
     int Result8 = ++num_2;
-    std::cout<<"result: "<<Result<<std::endl;
-    std::cout<<"result1: "<<Result1<<std::endl;
-    std::cout<<"result2: "<<Result2<<std::endl;
-    std::cout<<"result3: "<<Result3<<std::endl;
-    std::cout<<"result4: "<<Result4<<std::endl;
-    std::cout<<"result5: "<<Result5<<std::endl;
-    std::cout<<"result6: "<<Result6<<std::endl;
-    std::cout<<"result7: "<<Result7<<std::endl;
-    std::cout<<"result8: "<<Result8<<std::endl;
+    std::cout<<"result add: "<<Result<<std::endl;
+    std::cout<<"result1 sub: "<<Result1<<std::endl;
+    std::cout<<"result2 multiplication: "<<Result2<<std::endl;
+    std::cout<<"result3 division: "<<Result3<<std::endl;
+    std::cout<<"result4 modulus: "<<Result4<<std::endl;
+    std::cout<<"result5 display then increment: "<<Result5<<std::endl;
+    std::cout<<"result6 display and the decrement: "<<Result6<<std::endl;
+    std::cout<<"result7 increment and display: "<<Result7<<std::endl;
+    std::cout<<"result8 decrement and display: "<<Result8<<std::endl;
 }
