@@ -17,6 +17,7 @@ int main(){
     //compound operator
     int value = 35;
     value += 2;
+    std::cout<<"ans of compound operators: "<<std::endl;
     std::cout<<"result +=: "<<value<<std::endl;
     value -= 2;
     std::cout<<"result -=: "<<value<<std::endl;
@@ -27,11 +28,13 @@ int main(){
     value %= 2;
     std::cout<<"result %=: "<<value<<std::endl;
     //Results
+    std::cout<<"ans of arithmatic operators: "<<std::endl;
     std::cout<<"result add: "<<Result<<std::endl;
     std::cout<<"result1 sub: "<<Result1<<std::endl;
     std::cout<<"result2 multiplication: "<<Result2<<std::endl;
     std::cout<<"result3 division: "<<Result3<<std::endl;
     std::cout<<"result4 modulus: "<<Result4<<std::endl;
+    std::cout<<"ans of incre and decre operators: "<<std::endl;
     std::cout<<"result5 display then increment: "<<Result5<<std::endl;
     std::cout<<"result6 display and the decrement: "<<Result6<<std::endl;
     std::cout<<"result7 increment and display: "<<Result7<<std::endl;
@@ -39,10 +42,15 @@ int main(){
     //relational operator
     int number1{20};
     int number2{30};
+    std::cout<<"ans of boolean operators: "<<std::endl;
     std::cout<<std::boolalpha;
     std::cout<<"Result < : "<<(number1<number2)<<std::endl;
     std::cout<<"Result > : "<<(number1>number2)<<std::endl;
     std::cout<<"Result <= : "<<(number1<=number2)<<std::endl;
     std::cout<<"Result >= : "<<(number1>=number2)<<std::endl;
     std::cout<<"Result == : "<<(number1==number2)<<std::endl;
+    /* logical operator is use in a conditional statement 
+    and operator=&& its work according to the truth table of and gate,
+     or operator= || its work according to the truth table of or gate
+    not operator = ! this is use to negation of ans*/
 }
