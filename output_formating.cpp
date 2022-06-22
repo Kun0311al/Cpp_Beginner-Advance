@@ -1,5 +1,5 @@
 #include<iostream>
-#include<iomanip> //std::setw(value) is include in this file
+#include<iomanip> //std::setw(value),std::stefill('any sign') is include in this file
 int main(){
 //unordered data 
     std::cout<<std::endl;
@@ -53,4 +53,17 @@ int main(){
     std::cout<<std::setw(15)<<-12.4<<std::endl;
     std::cout<<std::internal;
     std::cout<<std::setw(15)<<-12.4<<std::endl;
+//fill the remaining part with the declared sign
+    //setfill(-) this is use to fill the remaining gap bitwin the words
+    std::cout<<std::endl;
+    std::cout<<"ordered Data with set fill"<<std::endl;
+    std::cout<<std::left;//right side is default
+    std::cout<<std::setfill('-');
+    std::cout<<std::setw(col_w)<<"First Name "<<std::setw(col_w)<< "Last Name "<<std::setw(col_w2)<<"Age"<<std::endl;
+    std::cout<<std::setw(col_w)<<"Kunal "<<std::setw(col_w)<< "Parkar "<<std::setw(col_w2)<<"19"<<std::endl;
+    std::cout<<std::setw(col_w)<<"Avinash "<<std::setw(col_w)<< "Rajak "<<std::setw(col_w2)<<"20"<<std::endl;
+    std::cout<<std::setw(col_w)<<"Ananya "<<std::setw(col_w)<< "Shetty "<<std::setw(col_w2)<<"19"<<std::endl;
+    std::cout<<std::setw(col_w)<<"Ruchita "<<std::setw(col_w)<< "Sabale "<<std::setw(col_w2)<<"21"<<std::endl;
+    std::cout<<std::setw(col_w)<<"Shraddha "<<std::setw(col_w)<< "Singh "<<std::setw(col_w2)<<"20"<<std::endl;
+    std::cout<<std::setw(col_w)<<"Shrikant "<<std::setw(col_w)<< "Sabbani "<<std::setw(col_w2)<<"21"<<std::endl;
 }
