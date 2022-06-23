@@ -18,9 +18,18 @@ int main(){
     }*/
 
     //if else statement
-    std::cout << std::endl;
-	std::cout << "using the else clause : " << std::endl;	
+    /*std::cout << std::endl;
+	std::cout << "using the else : " << std::endl;	
 	if(result == true){
+        std::cout << number1 << " is less than " << number2 << std::endl;
+    }else{
+        std::cout << number1 << " is NOT less than " << number2 << std::endl;
+    }*/
+
+    //direct condition is apply in the if condition
+    std::cout << std::endl;
+	std::cout << "Using expression as condition : " << std::endl;
+	if(number1 < number2){
         std::cout << number1 << " is less than " << number2 << std::endl;
     }else{
         std::cout << number1 << " is NOT less than " << number2 << std::endl;
