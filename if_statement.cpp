@@ -40,7 +40,7 @@ int main(){
     bool green {true};
     bool yellow {false};
     bool police_catch{true};
-     if(red){
+    /* if(red){
          std::cout << "Stop" << std::endl;
      }
      if(yellow){
@@ -48,5 +48,17 @@ int main(){
      }
 	 if(green){
 		 std::cout << "Go" << std::endl;
-	 }
+	 }*/
+
+     //nested if
+     /*std::cout << std::endl;
+	 std::cout << "IF Police officer stops" << std::endl;
+	 if(green){
+         if(police_catch){
+             std::cout << "Stop" << std::endl;
+         }
+         else{
+             std::cout << "Go" << std::endl;
+         }
+     }*/
 }
