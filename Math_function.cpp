@@ -1,5 +1,6 @@
 #include<iostream>
-#include<cmath>/*std::floor(),std::ceil(),std::abs(),std::exp(),std::pow(x,y),*/
+#include<cmath>/*std::floor(),std::ceil(),std::abs(),std::exp(),std::pow(x,y),
+                std::log(),std::log10(),std::sqtr(),std::round(),*/
 int main(){
     double weight { 51.30 };
     //floor is round the no by neglating no after point
@@ -22,5 +23,10 @@ int main(){
     //std::log10(x) that means log of x with base 10
     std::cout << "To get 10000, you'd need to elevate 10 to the power of : "
                  << std::log10(1000) << std::endl;
+    //std::sqrt(x) is use to taking the square root of the x
+    std::cout<<"Square root of 9: "<<std::sqrt(9)<<std::endl;
+    //std::round(x.y) is use to round up the x in the proper manner
+    std::cout<<"round up 3.3: "<<std::round(3.3)<<std::endl;
+    std::cout<<"round up 4.8: "<<std::round(4.8)<<std::endl;
     return 0;
 }
