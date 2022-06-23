@@ -61,4 +61,14 @@ int main(){
              std::cout << "Go" << std::endl;
          }
      }*/
+
+     //logical statement use as a condition to short the program lines
+     std::cout << std::endl;
+	 std::cout << "Police officer stops(less verbose)" << std::endl;
+	 if(green && !police_catch){
+         std::cout << "Go" << std::endl;
+     }else{
+         std::cout << "Stop" << std::endl;
+     }
+    return 0;
 }
