@@ -1,6 +1,6 @@
 #include<iostream>
 #include<iomanip> //std::setw(value),std::stefill('any sign'),std::showpos,
-                //std::hex::dec::oct are include in this file
+                //std::hex::dec::oct,std::uppercase,std::showpint,std::noshowpint are include in this file
 int main(){
 //unordered data 
     std::cout<<std::endl;
@@ -111,4 +111,8 @@ int main(){
     std::cout<<"double_no. (dec): "<<std::dec<<double_no<<std::endl;
     std::cout<<"double_no. (hex): "<<std::hex<<double_no<<std::endl;
     std::cout<<"double_no. (oct): "<<std::oct<<double_no<<std::endl;
+    /*for showing the letters in upper case use std::uppercase
+    std::showpint is use for the for eg:our value is double double_no:20.0 but if we print this 
+    value we will get 20 only bt after using std::show point we get 20.0000 like this and for off this 
+    setting we can use std::noshowpoint*/
 }
