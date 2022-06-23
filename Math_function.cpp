@@ -16,6 +16,11 @@ int main(){
     //power is use to show power of no. as per show on head
     std::cout << "2^5 is : " << std::pow(2,5) << std::endl;
     std::cout << "3^3 is : " << std::pow(3,3) << std::endl;
-    
+    // std::log(x) is use to take a loh of x 
+    std::cout << "Log ; to get 54.59, you would elevate e to the power of : "
+             << std::log(54.59) << std::endl;
+    //std::log10(x) that means log of x with base 10
+    std::cout << "To get 10000, you'd need to elevate 10 to the power of : "
+                 << std::log10(1000) << std::endl;
     return 0;
 }
