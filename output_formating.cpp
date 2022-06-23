@@ -1,5 +1,6 @@
 #include<iostream>
-#include<iomanip> //std::setw(value),std::stefill('any sign'),std::showpos is include in this file
+#include<iomanip> //std::setw(value),std::stefill('any sign'),std::showpos,
+                //std::hex::dec::oct are include in this file
 int main(){
 //unordered data 
     std::cout<<std::endl;
@@ -82,4 +83,32 @@ int main(){
     std::cout<<std::noshowpos;
     std::cout<<"Pos_no: "<<pos_no<<std::endl;
     std::cout<<"neg_no: "<<neg_no<<std::endl;
+//to display the numbers in other number system
+    /*std::dec is use to display the decimal no. of given number
+      std::hex is use to display the hexadecimal no. of given no.
+      std::oct is use to display the octal form of given no.*/
+    /*positive and negative no are declared already in last code*/
+    double double_no = 4.094;
+    std::cout<<std::endl;
+    std::cout<<"showing the no. in different no. system"<<std::endl;
+    std::cout<<"display original no.: "<<std::endl;
+    std::cout<<"pos_no.: "<<pos_no<<std::endl;
+    std::cout<<"neg_no.: "<<neg_no<<std::endl;
+    std::cout<<"double_no.: "<<double_no<<std::endl;
+    //using for positive no.:
+    std::cout<<std::endl;
+    std::cout<<"pos_no. (dec): "<<std::dec<<pos_no<<std::endl;
+    std::cout<<"pos_no. (hex): "<<std::hex<<pos_no<<std::endl;
+    std::cout<<"pos_no. (oct): "<<std::oct<<pos_no<<std::endl;
+    //using for negative no.:
+    std::cout<<std::endl;
+    std::cout<<"neg_no. (dec): "<<std::dec<<neg_no<<std::endl;
+    std::cout<<"neg_no. (hex): "<<std::hex<<neg_no<<std::endl;
+    std::cout<<"neg_no. (oct): "<<std::oct<<neg_no<<std::endl;
+    //using for double no.:
+    //this system is not works for double or floating no.
+    std::cout<<std::endl;
+    std::cout<<"double_no. (dec): "<<std::dec<<double_no<<std::endl;
+    std::cout<<"double_no. (hex): "<<std::hex<<double_no<<std::endl;
+    std::cout<<"double_no. (oct): "<<std::oct<<double_no<<std::endl;
 }
