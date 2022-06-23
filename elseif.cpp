@@ -4,8 +4,6 @@ const int Pen{ 10 };
 const int Marker{ 20 };
 const int Eraser{ 30 };
 const int Rectangle{ 40 };
-const int Circle{ 50 };
-const int Ellipse{ 60 };
 int main(){
     int tool {Eraser};
 
@@ -21,12 +19,6 @@ int main(){
     }
     else if (tool == Rectangle) {
         std::cout << "Active tool is Rectangle" << std::endl;
-    }
-    else if (tool == Circle) {
-        std::cout << "Active tool is Circle" << std::endl;
-    }
-    else if (tool == Ellipse) {
-        std::cout << "Active tool is Ellipse" << std::endl;
     }
     return 0;
 }
