@@ -92,12 +92,14 @@ int main(){
     std::cout << "Score sum : " << sum << std::endl;
     */
 
+    /*
     int scores [] {2,67,4};
     int count { std::size(scores)}; // std::size( C++17)
 
     std::cout << "sizeof(scores) : " << sizeof(scores) << std::endl;
     std::cout << "sizeof(scores[0]) : " << sizeof(scores[0]) << std::endl;
     std::cout << "count : " << count << std::endl;
+    */
 
     /*
     int count {sizeof(scores)/sizeof(scores[0])};
@@ -110,5 +112,22 @@ int main(){
             std::cout << "value  : " << i << std::endl;       
     }
     */
+
+   /**********char array ********/
+   char message[]{'H','E','L','L','O'};
+   std::cout<<"Message : ";
+   for (auto i: message){
+        std::cout<<i;
+   }
+   std::cout<<std::endl;
+
+   //modify the array
+   message[1]='O';
+   std::cout<<"Message after modifying : ";
+   for (auto i: message){
+        std::cout<<i;
+   }
+   std::cout<<std::endl;
+   
     return 0;
 }
