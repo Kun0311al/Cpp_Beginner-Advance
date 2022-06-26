@@ -114,7 +114,9 @@ int main(){
     */
 
    /**********char array ********/
-   char message[]{'H','E','L','L','O'};
+   
+   char message[]{'H','E','L','L','O','\0'};//'\0'is use for the declaring null at the end
+   /*
    std::cout<<"Message : ";
    for (auto i: message){
         std::cout<<i;
@@ -128,6 +130,13 @@ int main(){
         std::cout<<i;
    }
    std::cout<<std::endl;
-   
+   */
+
+//taking a garbage value in array after the actual elements
+  /*std::cout<<"Message : "<<message<<std::endl;*/
+   //for removing that garbage value we are using the '\0' at the end of the array
+
+
+
     return 0;
 }
