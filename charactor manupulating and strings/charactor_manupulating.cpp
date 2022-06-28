@@ -43,16 +43,17 @@ int main(){
     int lower_char{};
     int upper_char{};
 
-    for (size_t i = 0; i < std::size(test_value2); i++){
-        if (std::isupper(test_value2[i])){
-            std::cout<<"found a Upper char at index: "<<i<<std::endl;
+    for (auto charactar:test_value2){
+        if (std::isupper(charactar)){
+            std::cout<<" "<<charactar;
             upper_char++;
-        }else if (std::islower(test_value2[i])){
-            std::cout<<"found a Lower char at index: "<<i<<std::endl;
+        }else if (std::islower(charactar)){
+            std::cout<<" "<<charactar;
             lower_char++;
         }
         
     }
+    std::cout<<std::endl;
     std::cout<<"Total upper char : "<<upper_char<<std::endl;
     std::cout<<"Total lower char : "<<lower_char<<std::endl;
     return 0;
