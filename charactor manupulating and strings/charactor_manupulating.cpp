@@ -24,5 +24,19 @@ int main(){
     }else{
         std::cout<<"this id not alphabetic"<<std::endl;
     } 
+
+    //this use for the blank char
+    char test_value2[]{"Hello I am Kunal Parkar!!<I am a C++ Learner.."};
+    std::cout<<"Message for test: "<<test_value2<<std::endl;
+    int blank_char{};
+
+    for (size_t i = 0; i < std::size(test_value2); i++){
+        if (std::isblank(test_value2[i])){
+            std::cout<<"found a blank char at index: "<<i<<std::endl;
+            blank_char++;
+        }
+        
+    }
+    std::cout<<"Total Blank char : "<<blank_char<<std::endl;
     return 0;
 }
