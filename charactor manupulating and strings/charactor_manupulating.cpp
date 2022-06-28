@@ -1,4 +1,6 @@
 #include<iostream>
+//if in any compiler this is not running then u can also use 
+//#include<cctype> this library
 int main(){
     //this code is for getting alphanumeric value
     std::cout<<"isalnum : "<<std::endl;
