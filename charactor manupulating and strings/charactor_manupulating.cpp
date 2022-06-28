@@ -70,5 +70,21 @@ int main(){
     }
     std::cout<<std::endl;
     std::cout<<"Total digit in array : "<<digit_no<<std::endl;
+
+    //this code is to convert array in upper and lower case
+    char dest_test[std::size(test_value2)]{};
+
+    for (size_t i{};i<std::size(test_value2);i++){
+        dest_test[i]=std::toupper(test_value2[i]);
+    }
+    std::cout<<"original string: "<<test_value2<<std::endl;
+    std::cout<<"uppercase string: "<<dest_test<<std::endl;
+
+    for (size_t i{};i<std::size(test_value2);i++){
+        dest_test[i]=std::tolower(test_value2[i]);
+    }
+    std::cout<<"original string: "<<test_value2<<std::endl;
+    std::cout<<"lowercase string: "<<dest_test<<std::endl;
+    
     return 0;
 }
