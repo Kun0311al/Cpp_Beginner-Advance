@@ -16,6 +16,13 @@ int main(){
     std::cout<<std::endl;
     std::cout<<"C is alphabetic : "<<std::isalpha('C')<<std::endl;
     std::cout<<"^ is alphabetic : "<<std::isalpha('^')<<std::endl;
-    std::cout<<"* is alphabetic : "<<std::isalpha('*')<<std::endl; 
+    std::cout<<"* is alphabetic : "<<std::isalpha('*')<<std::endl;
+
+    char test_value1{'e'};
+    if (std::isalnum(test_value1)){
+        std::cout<<"this is a alphabetic char";
+    }else{
+        std::cout<<"this id not alphabetic"<<std::endl;
+    } 
     return 0;
 }
