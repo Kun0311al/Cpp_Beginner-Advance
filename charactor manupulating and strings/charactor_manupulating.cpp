@@ -56,5 +56,19 @@ int main(){
     std::cout<<std::endl;
     std::cout<<"Total upper char : "<<upper_char<<std::endl;
     std::cout<<"Total lower char : "<<lower_char<<std::endl;
+
+    //this code is use  to find digit
+    char test_value3[]{"This is kunal's phone no.: 9321836220"};
+    int digit_no{};
+    std::cout<<"actual testing statement is: "<<test_value3<<std::endl;
+
+    for (auto charactar2:test_value3){
+        if (std::isdigit(charactar2)){
+            std::cout<<" "<<charactar2;
+            digit_no++;
+        }        
+    }
+    std::cout<<std::endl;
+    std::cout<<"Total digit in array : "<<digit_no<<std::endl;
     return 0;
 }
