@@ -17,7 +17,7 @@ int main(){
     std::cout<<"C is alphabetic : "<<std::isalpha('C')<<std::endl;
     std::cout<<"^ is alphabetic : "<<std::isalpha('^')<<std::endl;
     std::cout<<"* is alphabetic : "<<std::isalpha('*')<<std::endl;
-
+//if the result is true then it will gives u a value diff from zero
     char test_value1{'e'};
     if (std::isalnum(test_value1)){
         std::cout<<"this is a alphabetic char";
