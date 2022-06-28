@@ -46,8 +46,23 @@ int main(){
     std::cout<<"making the pointer points towords the other address: "<<std::endl;
     std::cout<<"int_value : "<<int_value<<std::endl;
     std::cout<<"ref_int_value : "<<ref_int_value<<std::endl;
+    std::cout<<"&int_value :"<<&int_value<<std::endl;
+    std::cout<<"&ref_int_value : "<<&ref_int_value<<std::endl;
     std::cout<<"p_int_value : "<<p_int_value<<std::endl;
     std::cout<<"*p_int_value : "<<*p_int_value<<std::endl;
     //result:pointer change the value and change the address also 
 
+    //change the data through the pointer
+    *p_int_value = 55;
+    std::cout<<std::endl;
+    std::cout<<"change the data through pointer: "<<std::endl;
+    std::cout<<"int_value : "<<int_value<<std::endl;
+    std::cout<<"ref_int_value : "<<ref_int_value<<std::endl;
+    std::cout<<"&int_value :"<<&int_value<<std::endl;
+    std::cout<<"&ref_int_value : "<<&ref_int_value<<std::endl;
+    std::cout<<"p_int_value : "<<p_int_value<<std::endl;
+    std::cout<<"*p_int_value : "<<*p_int_value<<std::endl;
+    /*result:the original variable address and the value still be the same but the value of pointer and
+    the address of the pointer has change bcoz of the ref and the original value lives in the different 
+    address */
 }
