@@ -32,6 +32,20 @@ int main(){
     std::cout<<"&ref_double_value : "<<&ref_double_value<<std::endl;
     //result:after changing the data the address of the variable is same throughout
 
-    
+    //modifying data by using refrence variable
+    ref_int_value= 20;
+    ref_double_value= 30.10;
+
+    std::cout<<std::endl;
+    std::cout<<"int_value : "<<int_value<<std::endl;
+    std::cout<<"&int_value : "<<&int_value<<std::endl;
+    std::cout<<"double_value : "<<double_value<<std::endl;
+    std::cout<<"&double_value : "<<&double_value<<std::endl;
+
+    std::cout<<"ref_int_value : "<<ref_int_value<<std::endl;
+    std::cout<<"&ref_int_value : "<<&ref_int_value<<std::endl;
+    std::cout<<"ref_double_value : "<<ref_double_value<<std::endl;
+    std::cout<<"&ref_double_value : "<<&ref_double_value<<std::endl;
+    //result:after changing the data the address of the variable is same throughout
     return 0;
 }
