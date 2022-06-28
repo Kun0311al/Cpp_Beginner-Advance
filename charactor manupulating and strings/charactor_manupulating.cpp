@@ -26,7 +26,7 @@ int main(){
     } 
 
     //this use for the blank char
-    char test_value2[]{"Hello I am Kunal Parkar!!<I am a C++ Learner.."};
+    char test_value2[]{"Hello I am Kunal Parkar!!.I am a C++ Learner.."};
     std::cout<<"Message for test: "<<test_value2<<std::endl;
     int blank_char{};
 
@@ -38,5 +38,22 @@ int main(){
         
     }
     std::cout<<"Total Blank char : "<<blank_char<<std::endl;
+
+    //this code is to find the apper and lower case char
+    int lower_char{};
+    int upper_char{};
+
+    for (size_t i = 0; i < std::size(test_value2); i++){
+        if (std::isupper(test_value2[i])){
+            std::cout<<"found a Upper char at index: "<<i<<std::endl;
+            upper_char++;
+        }else if (std::islower(test_value2[i])){
+            std::cout<<"found a Lower char at index: "<<i<<std::endl;
+            lower_char++;
+        }
+        
+    }
+    std::cout<<"Total upper char : "<<upper_char<<std::endl;
+    std::cout<<"Total lower char : "<<lower_char<<std::endl;
     return 0;
 }
