@@ -1,5 +1,5 @@
 #include<iostream>
-#include<cstring>//std::strlen
+#include<cstring>//std::strlen,std::strcmp
 int main(){
     //real array and decayedinto pointer
     const char test1[]{"Hello I'm Kunal Parkar!!..Learning CPP."};
@@ -16,7 +16,16 @@ int main(){
     std::cout<<"sizeof(test2) : "<<sizeof(test2)<<std::endl;
 
     //for comparing string 
-    const char* test_value1{"Kunal"};
-    const
+    const char* test_value1{"Zunal"};
+    const char* test_value2{"Runal"};
+
+    char test_value3[]{"Kunal"};
+    char test_value4[]{"Runal"};
+
+    std::cout<<"std::strcmp( "<<test_value1<<","<<test_value2<<" ) : "<<std::strcmp(test_value1,test_value2)
+    <<std::endl;//Z comes after the R so we get +1
+
+    std::cout<<"std::strcmp( "<<test_value3<<","<<test_value4<<" ) : "<<std::strcmp(test_value3,test_value4)
+    <<std::endl;//K comes before the R so we get -1
     return 0;
 }
