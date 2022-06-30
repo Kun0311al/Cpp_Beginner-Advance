@@ -9,5 +9,17 @@ int main(){
     std::cout<<"concatenation array: "<<test1<<std::endl;
     std::strcat(test1," How are you??");
     std::cout<<"concatenation array: "<<test1<<std::endl;
+
+    //concamtenation of two dynamic array and check the length
+    char* test_value1 = new char[100]{'H','E','L','L','O','\0'};
+    char* test_value2=
+                    new char[50]{' ','K','U','N','A','L',' ','U',' ','C','A','N',' ','D','O',' ','I','T','\0'};
+    std::cout<<"strlen of test_value1 : "<<std::strlen(test_value1)<<std::endl;
+    std::cout<<"strlen of test_value2 : "<<std::strlen(test_value2)<<std::endl;
+
+    std::strcat(test_value1,test_value2);
+    std::cout<<"New test_value1 :"<<test_value1<<std::endl;
+    std::cout<<"strlen of new test_value1 : "<<std::strlen(test_value1)<<std::endl;
+    
     return 0;
 }
