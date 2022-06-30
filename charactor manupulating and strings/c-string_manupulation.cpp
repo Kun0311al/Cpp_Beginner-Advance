@@ -52,7 +52,7 @@ int main(){
     std::cout << "std::strchr : " << std::endl;
     
 	//we use std::strchr to find all the characters one by one.
-	const char * const str { "Try not. Do, or do not. There is no try. But u have to Try."};
+	const char *  str { "Try not. Do, or do not. There is no try. But u have to Try."};
     //Can make this a const pointer to prevent users from making it point somewhere else
 	char target = 'T';
 	const char *result = str;
@@ -67,5 +67,31 @@ int main(){
 		++iterations;
 	}
 	std::cout << "iterations : " << iterations << std::endl;
+
+    /*
+    std::cout << std::endl;
+    std::cout << "std::strchr : " << std::endl;
+    
+	//we use std::strchr to find all the characters one by one.
+	const char *  str { "Try not. Do, or do not. There is no try. But u have to Try."};
+    //Can make this a const pointer to prevent users from making it point somewhere else
+	char target = 'T';
+	const char *result{nullptr};
+	size_t iterations{};
+	
+ 
+	while ((result = std::strchr(str, target)) != nullptr) {
+		std::cout << "Found '" << target
+				<< "' starting at '" << result << "'\n";
+ 
+		++str;
+		++iterations;
+	}
+	std::cout << "iterations : " << iterations << std::endl;
+
+    //if we do not store the str in pointer result.the loop will always change the value of str and in every 
+    //search we move foward by one char and get the same target again and again.so always store the ewsult in
+    //pointer result and increment the pointer.
+    */
     return 0;
 }
