@@ -27,5 +27,12 @@ int main(){
 
     std::cout<<"std::strcmp( "<<test_value3<<","<<test_value4<<" ) : "<<std::strcmp(test_value3,test_value4)
     <<std::endl;//K comes before the R so we get -1
+
+    test_value1="Runat";//we can change the value of pointer but can't change the value of array
+    test_value2="Runal";//we can change the value of pointer but can't change the value of array
+
+    std::cout<<"std::strcmp( "<<test_value1<<","<<test_value2<<" ) : "<<std::strcmp(test_value1,test_value2)
+    <<std::endl;
+
     return 0;
 }
