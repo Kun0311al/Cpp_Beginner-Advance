@@ -34,6 +34,15 @@ int main(){
     std::cout<<"strlen of test_value4: "<<std::strlen(test_value4)<<std::endl;
     std::cout<<"size of test_value4: "<<sizeof(test_value4)<<std::endl;//pointer size value
     std::cout<<"test_value4 : "<<test_value4<<std::endl;
+
+    //copy the string onto the array
+    const char* source1 = "Holaa";
+    char dest1[6] = {'a','b','c','d','e','\0'};
+
+    std::cout<<"dest1: "<<dest1<<std::endl;
+    //copy 5 char from source1 to dest1
+    std::strncpy(dest1,source1,5);
+    std::cout<<"the dest1 array after copying things : "<<dest1<<std::endl; 
     
     return 0;
 }
