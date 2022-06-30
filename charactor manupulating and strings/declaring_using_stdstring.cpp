@@ -22,5 +22,11 @@ int main(){
     //changing std::string at runtime
     new_message= "std::cout<<weird_message:<<weird_message<<std::endl;";
     std::cout<<"new_message: "<<new_message<<std::endl;
+
+    //use a raw array
+    const char* planet = "try some thing new";
+    planet = "try some thing new try some thing new";
+    std::cout<<"planet: "<<planet<<std::endl;
+    //if u r use this the space is allocated by * it will scraped
     return 0;
 }
