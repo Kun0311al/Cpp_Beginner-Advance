@@ -46,5 +46,26 @@ int main(){
     n=5;
     std::cout<<"std::strcmp( "<<test_value1<<","<<test_value2<<","<<n<<" ) : "<<std::strncmp(test_value1,test_value2,n)
     <<std::endl;
+
+//to find the target veriable in string
+    std::cout << std::endl;
+    std::cout << "std::strchr : " << std::endl;
+    
+	//we use std::strchr to find all the characters one by one.
+	const char * const str { "Try not. Do, or do not. There is no try. But u have to Try."};
+    //Can make this a const pointer to prevent users from making it point somewhere else
+	char target = 'T';
+	const char *result = str;
+	size_t iterations{};
+	
+ 
+	while ((result = std::strchr(result, target)) != nullptr) {
+		std::cout << "Found '" << target
+				<< "' starting at '" << result << "'\n";
+ 
+		++result;
+		++iterations;
+	}
+	std::cout << "iterations : " << iterations << std::endl;
     return 0;
 }
