@@ -1,5 +1,5 @@
 #include<iostream>
-#include<cstring>//std::strlen,std::strcmp,std::strncmp
+#include<cstring>//std::strlen,std::strcmp,std::strncmp,std::strrchr
 int main(){
     //real array and decayedinto pointer
     const char test1[]{"Hello I'm Kunal Parkar!!..Learning CPP."};
@@ -93,5 +93,14 @@ int main(){
     //search we move foward by one char and get the same target again and again.so always store the ewsult in
     //pointer result and increment the pointer.
     */
+
+
+/*for Finds the last occurrence of ch  in the byte string pointed to by str.
+The terminating null character is considered to be a part of the string and can be found if searching for '\0'*/
+   std::cout<<std::endl;
+   char input[]{"./c/champ/doit.cpp"};
+   char *output = std::strrchr(input,'/');//(string,target)
+   if(output)
+        std::cout<<output+1<<std::endl;
     return 0;
 }
