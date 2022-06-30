@@ -1,5 +1,5 @@
 #include<iostream>
-#include<cstring>//std::strcat
+#include<cstring>//std::strcat,std::strncat,std::strcpy
 int main(){
     //for concantenation our string it use to combine to array or array with string
     std::cout<<"std::strcat :"<<std::endl;
@@ -26,6 +26,14 @@ int main(){
     char test4[30] = " Work smart not fool!!";
     std::cout<<std::strncat(test3,test4,11)<<std::endl;
     std::cout<<"test3 cincatenating array : "<<std::strncat(test3,test4,11)<<std::endl;
+
+    //this is use to copy one array in the another array
+    const char* test_value3 = "Kunal U can do it!!";
+    char* test_value4 = new char[std::strlen(test_value3)+1];//+1 is use bcoz strlen not consider null pointer
+    std::strcpy(test_value4,test_value3);
+    std::cout<<"strlen of test_value4: "<<std::strlen(test_value4)<<std::endl;
+    std::cout<<"size of test_value4: "<<sizeof(test_value4)<<std::endl;//pointer size value
+    std::cout<<"test_value4 : "<<test_value4<<std::endl;
     
     return 0;
 }
