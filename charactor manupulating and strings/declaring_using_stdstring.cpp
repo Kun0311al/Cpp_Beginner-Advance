@@ -27,6 +27,6 @@ int main(){
     const char* planet = "try some thing new";
     planet = "try some thing new try some thing new";
     std::cout<<"planet: "<<planet<<std::endl;
-    //if u r use this the space is allocated by * it will scraped
+    //if u r use this the space is allocated by * is totally waste
     return 0;
 }
