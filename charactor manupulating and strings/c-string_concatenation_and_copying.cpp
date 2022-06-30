@@ -1,7 +1,7 @@
 #include<iostream>
 #include<cstring>//std::strcat
 int main(){
-    //for concantenation our string
+    //for concantenation our string it use to combine to array or array with string
     std::cout<<"std::strcat :"<<std::endl;
     char test1[20]{"HEllo "};
     char test2[10]{"Kunal"};
