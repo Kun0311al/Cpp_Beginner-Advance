@@ -20,6 +20,12 @@ int main(){
     std::strcat(test_value1,test_value2);
     std::cout<<"New test_value1 :"<<test_value1<<std::endl;
     std::cout<<"strlen of new test_value1 : "<<std::strlen(test_value1)<<std::endl;
+
+    //only given no. of char in the array will combine with the other array
+    char test3[20] = "Kunal";
+    char test4[30] = " Work smart not fool!!";
+    std::cout<<std::strncat(test3,test4,11)<<std::endl;
+    std::cout<<"test3 cincatenating array : "<<std::strncat(test3,test4,11)<<std::endl;
     
     return 0;
 }
