@@ -37,7 +37,7 @@ int main(){
 
     //copy the string onto the array
     const char* source1 = "Holaa";
-    char dest1[6] = {'a','b','c','d','e','\0'};
+    char dest1[] = {'a','b','c','d','e','\0'};
 
     std::cout<<"dest1: "<<dest1<<std::endl;
     //copy 5 char from source1 to dest1
