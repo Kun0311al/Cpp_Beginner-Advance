@@ -1,5 +1,5 @@
 #include<iostream>
-#include<cstring>//std::strlen,std::strcmp
+#include<cstring>//std::strlen,std::strcmp,std::strncmp
 int main(){
     //real array and decayedinto pointer
     const char test1[]{"Hello I'm Kunal Parkar!!..Learning CPP."};
@@ -34,5 +34,17 @@ int main(){
     std::cout<<"std::strcmp( "<<test_value1<<","<<test_value2<<" ) : "<<std::strcmp(test_value1,test_value2)
     <<std::endl;
 
+//tell the funtion however char to compare  using std::strncmp
+//this method only compare the given no of variable in string and give the answer
+    size_t n{3};
+    std::cout<<"std::strncmp : "<<std::endl;
+    std::cout<<"std::strncmp( "<<test_value1<<","<<test_value2<<","<<n<<" ) : "<<std::strncmp(test_value1,test_value2,n)
+    <<std::endl;
+
+    test_value1="Kunal";
+    test_value2="Kunat";
+    n=5;
+    std::cout<<"std::strcmp( "<<test_value1<<","<<test_value2<<","<<n<<" ) : "<<std::strncmp(test_value1,test_value2,n)
+    <<std::endl;
     return 0;
 }
