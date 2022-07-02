@@ -43,8 +43,8 @@ double increment_and_multiply(double a,double b){
     double result =((++a)*(++b));
     std::cout<<"the value of the a (after): "<<a<<std::endl;
     std::cout<<"the value of the b (after): "<<b<<std::endl;
-    std::cout<<"the result (after ++): "<<result<<std::endl;
-    return 0;
+    return result;
+    /*this incrementation and the other this are only valid for this function only*/
 }
 int main(){
     unsigned int a{};
