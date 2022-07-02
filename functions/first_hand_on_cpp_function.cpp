@@ -31,6 +31,10 @@ void say_hello(){
     std::cout<<"Hello everyone, this is kunal parkar!!"<<std::endl;
     return;
 }
+//function not taking paraameters but give the retuen value
+int lucky_no(){
+    return 10;
+}
 int main(){
     unsigned int a{};
     std::cout<<"enter your age: ";
@@ -47,5 +51,7 @@ int main(){
     std::cout<<"min : "<<result<<std::endl;
     //calling say_hello
     say_hello();
+    //calling lucky_no
+    std::cout<<"lucky number is: "<<lucky_no();
     return 0;
 }
