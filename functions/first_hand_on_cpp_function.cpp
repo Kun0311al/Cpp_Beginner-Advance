@@ -35,6 +35,17 @@ void say_hello(){
 int lucky_no(){
     return 10;
 }
+//this function increment the given parameters and multiply them 
+double increment_and_multiply(double a,double b){
+    std::cout<<"the given input is: "<<std::endl;
+    std::cout<<"first no: "<<a<<std::endl;
+    std::cout<<"second no: "<<b<<std::endl;
+    double result =((++a)*(++b));
+    std::cout<<"the value of the a (after): "<<a<<std::endl;
+    std::cout<<"the value of the b (after): "<<b<<std::endl;
+    std::cout<<"the result (after ++): "<<result<<std::endl;
+    return 0;
+}
 int main(){
     unsigned int a{};
     std::cout<<"enter your age: ";
@@ -53,5 +64,6 @@ int main(){
     say_hello();
     //calling lucky_no
     std::cout<<"lucky number is: "<<lucky_no();
+    increment_and_multiply(b,c);
     return 0;
 }
