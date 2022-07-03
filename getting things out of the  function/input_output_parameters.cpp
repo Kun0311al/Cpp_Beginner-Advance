@@ -7,7 +7,7 @@ void max_string(std::string input1,std::string input2,std::string& output){
         output = input1;
     }else{
         output = input2;
-    }
+    }//some thing is fult in this function
 }
 
 void max_int(int input1,int input2,int& output){
