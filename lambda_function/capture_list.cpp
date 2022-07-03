@@ -12,6 +12,7 @@ int main(){
 
     //check the incrementation of outer value also increse the inner value
     //prove:inter nd outer are both are different thing
+    //inside the lambda function is the only copy of the outer
     auto func = [a](){
         std::cout<<"a : "<<a<<std::endl;
     };
