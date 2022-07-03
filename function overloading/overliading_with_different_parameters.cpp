@@ -37,3 +37,4 @@ int main(){
     std::cout<<"Max : "<<max(double_2,int_1)<<std::endl;
     return 0;
 }
+/*u can also overload the function by using the refrence parameters,pointer parameters*/ 
