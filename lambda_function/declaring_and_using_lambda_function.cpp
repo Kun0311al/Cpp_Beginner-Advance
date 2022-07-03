@@ -17,5 +17,10 @@ int main(){
     };
 
     func();
+
+    [](int a,int b){
+        std::cout<<"a+b : "<<(a+b)<<std::endl;
+    }(3,5);//we are passing the value at the time of calling
+    
     return 0;
 }
