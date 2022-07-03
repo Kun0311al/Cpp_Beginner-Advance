@@ -21,6 +21,14 @@ int main(){
     [](int a,int b){
         std::cout<<"a+b : "<<(a+b)<<std::endl;
     }(3,5);//we are passing the value at the time of calling
-    
+
+    //giving the name and call it multiple time
+    auto func2 = [](int a,int b){
+        std::cout<<"a+b : "<<(a+b)<<std::endl;
+    };
+
+    func2(2,5);
+    func2(14,36);
+
     return 0;
 }
