@@ -17,7 +17,7 @@ double max(double a,double b){
     return (a>b)?a:b;
 }
 
-std::string max(std::string a,std::string b){
+std::string_view max(std::string_view a,std::string_view b){
     return (a>b)?a:b;//this condition is set the string in ascending order
 }
 int main(){
