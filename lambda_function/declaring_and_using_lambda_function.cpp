@@ -30,5 +30,13 @@ int main(){
     func2(2,5);
     func2(14,36);
 
+    //lambda function that returns something
+    auto func3 = [](int a,int b){
+        return a+b;
+    };
+
+    int result = func3(4,29);
+    std::cout<<"sum : "<<result<<std::endl;
+
     return 0;
 }
