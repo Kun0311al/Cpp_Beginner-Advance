@@ -22,6 +22,18 @@ int main(){
        func();
        a++;
     }
+
+    //if we pass the address of the variable the the inner and outer veriable are link together
+    //then if we change the external veriable the inter will also change
+    auto func2 = [&a](){
+        std::cout<<"a : "<<a<<std::endl;
+    };
+    for (size_t i = 0; i < 5; i++)
+    {
+       std::cout<<"outer a : "<<a<<std::endl;
+       func2();
+       a++;
+    }
      
 
     return 0;
