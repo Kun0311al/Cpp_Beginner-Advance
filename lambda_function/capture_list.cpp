@@ -23,6 +23,7 @@ int main(){
        a++;
     }
 
+    //capture by refrence
     //if we pass the address of the variable the the inner and outer veriable are link together
     //then if we change the external veriable the inter will also change
     auto func2 = [&a](){
