@@ -38,5 +38,13 @@ int main(){
     int result = func3(4,29);
     std::cout<<"sum : "<<result<<std::endl;
 
+    //specify the return data type
+    auto func4 = [](double a,double b)->int{
+        return a+b;
+    };
+
+    auto result2 = func4(20.3,30.5);
+    std::cout<<"sum bt give only int ans : "<<result2<<std::endl;
+
     return 0;
 }
