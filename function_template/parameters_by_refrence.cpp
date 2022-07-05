@@ -20,3 +20,4 @@ template <typename T> T& max(T& a,T& b){//call the function parameter by refrenc
     std::cout<<"in-&a"<<&a<<std::endl;
     return (a>b)?a:b;
 }
+//the address of the inner and outer emement is same bcoz the value is pass by refrence
