@@ -5,6 +5,8 @@
 type name T is auto detect the input value type i.e. int,double,string,long,double.......
 imp::this is not a cpp code this is just a blueprint*/
 
+/*you can't use two types that means u can't paass both the value at the same time*/
+
 //declaration of the template function
 template <typename T> T max(T a,T b);
 
