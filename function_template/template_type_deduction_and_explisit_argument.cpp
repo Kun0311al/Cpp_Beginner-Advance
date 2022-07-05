@@ -12,13 +12,17 @@ int main(){
     std::string e="Kunal";
     std::string f="Runal";
 
-    max(a,b);//int type deduced
-    max(c,d);//double type deduced
-    //max(e,f);//string type deduced "string is not works properly"
+    auto result=max(a,b);//int type deduced
+    auto result2=max(c,d);//double type deduced
+    //auto result3=max(e,f);//string type deduced "string is not works properly"
 
-    max<double>(c,d);//explisit the function that means we want double
-    max<double>(a,c);
-    //max<double>(a,f);//gives the error bcoz string can't change into int
+    auto result4=max<double>(c,d);//explisit the function that means we want double
+    auto result5=max<double>(a,c);
+    //auto result6=max<double>(a,f);//gives the error bcoz string can't change into int
+    std::cout<<"Max : "<<result<<std::endl;
+    std::cout<<"Max : "<<result2<<std::endl;
+    std::cout<<"Max : "<<result4<<std::endl;
+    std::cout<<"Max : "<<result5<<std::endl;
     return 0;
 }
 
