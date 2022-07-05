@@ -21,7 +21,7 @@ class cylinder{
 int main(){
 
     //we add the element in the class
-    cylinder cylinder1;
+    cylinder cylinder1;//first object
     std::cout<<"volume : "<<cylinder1.volume()<<std::endl;
 
     //change the member veriable
