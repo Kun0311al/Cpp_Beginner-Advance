@@ -16,9 +16,11 @@ int main(){
     auto result2=max(c,d);//double type deduced
     //auto result3=max(e,f);//string type deduced "string is not works properly"
 
+    //explicite function argument
     auto result4=max<double>(c,d);//explisit the function that means we want double
     auto result5=max<double>(a,c);
     //auto result6=max<double>(a,f);//gives the error bcoz string can't change into int
+
     std::cout<<"Max : "<<result<<std::endl;
     std::cout<<"Max : "<<result2<<std::endl;
     std::cout<<"Max : "<<result4<<std::endl;
