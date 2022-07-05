@@ -27,5 +27,8 @@ int main(){
     cylinder1.radius = 20;
     cylinder1.height = 5;
     std::cout<<"volume : "<<cylinder1.volume()<<std::endl;
+    
+    cylinder1.height = 2;
+    std::cout<<"volume : "<<cylinder1.volume()<<std::endl;
     return 0;
 }
