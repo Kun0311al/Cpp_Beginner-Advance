@@ -20,7 +20,7 @@ int main(){
 
     std::cout<<"Max : "<<max(a,b)<<std::endl;
     std::cout<<"Max : "<<max(c,d)<<std::endl;
-    //std::cout<<"Max : "<<max(e,f)<<std::endl;
+    //std::cout<<"Max : "<<max(e,f)<<std::endl;//this line is not execute properly
 
     return 0;
 }
