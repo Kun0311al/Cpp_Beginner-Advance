@@ -1,3 +1,7 @@
+#ifndef CYLINDER_H  //these are the guard for the file to do not overwrite
+#define CYLINDER_H  //these are the guard for the file to do not overwrite
+
+
 #include"constant.h"
 
 class cylinder{
@@ -29,3 +33,5 @@ class cylinder{
             return pi*cyli_radius*cyli_radius*cyli_height;
         }
 };
+
+#endif  //these are the guard for the file to do not overwrite
