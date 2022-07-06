@@ -10,6 +10,7 @@ class cylinder{
         double cyli_height {1.0};
     public:
         //getter
+        //this os use to get the private member to outside the class
         double Get_cyli_radius(){
             return cyli_radius;
         }
@@ -18,6 +19,7 @@ class cylinder{
         }
 
         //setter
+        //this is use to change the private member value from the outside
         void Set_cyli_radius(double rad_param){
             cyli_radius = rad_param;
         }
