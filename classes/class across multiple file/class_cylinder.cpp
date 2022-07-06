@@ -7,6 +7,6 @@ cylinder::cylinder(double rad_param,double height_param){
 
 //we can also seprate the function in the class like this
 /*
-cylinder::double volume(){
+double cylinder::volume(){
             return pi*cyli_radius*cyli_radius*cyli_height;
         }*/
