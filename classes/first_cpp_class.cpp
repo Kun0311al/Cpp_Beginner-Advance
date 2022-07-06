@@ -31,5 +31,10 @@ int main(){
     
     cylinder1.height = 2;
     std::cout<<"volume : "<<cylinder1.volume()<<std::endl;
+
+    cylinder cylinder2;
+    cylinder2.radius =10;
+    cylinder2.height = 2;
+    std::cout<<"volume : "<<cylinder2.volume()<<std::endl;
     return 0;
 }
