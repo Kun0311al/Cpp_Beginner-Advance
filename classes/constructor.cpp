@@ -5,10 +5,10 @@ const double pi{3.1415926535897932384626433832795};
 class cylinder{
     public:
         //constructor which is not taking any parameters
-        /*cylinder(){
+        cylinder(){
             cyli_radius = 2.0;
             cyli_height = 2.0;
-        }*/
+        }
         //constructor which is taking parameters
         cylinder(double rad_param,double height_param){
             cyli_radius = rad_param;
