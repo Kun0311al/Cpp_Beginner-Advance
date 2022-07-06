@@ -36,6 +36,8 @@ class cylinder{
 int main(){
     cylinder cylinder1;
     std::cout<<"volume of cylinder1 : "<<cylinder1.volume()<<std::endl;
+    //now u also get the value of the private parameters
+    std::cout<<"cylinder radius : "<<cylinder1.Get_cyli_radius()<<std::endl;
 
     cylinder cylinder2;
     cylinder2.Set_cyli_radius(10);
