@@ -1,37 +1,28 @@
-#ifndef CYLINDER_H  //these are the guard for the file to do not overwrite
-#define CYLINDER_H  //these are the guard for the file to do not overwrite
-
-
-#include"constant.h"
+#ifndef CYLINDER_H  //these are the guard to dont overwrite the code while executing
+#define CYLINDER_H  //these are the guard to dont overwrite the code while executing 
 
 class cylinder{
-    private:
-        //member veriable
-        double cyli_radius {1.0};
-        double cyli_height {1.0};
     public:
-        //getter
-        //this os use to get the private member to outside the class
-        double Get_cyli_radius(){
-            return cyli_radius;
+        //constructor which is not taking any parameters
+        cylinder(){
+            cyli_radius = 2.0;
+            cyli_height = 2.0;
         }
-        double Get_cyli_height(){
-            return cyli_height;
-        }
-
-        //setter
-        //this is use to change the private member value from the outside
-        void Set_cyli_radius(double rad_param){
+        //constructor which is taking parameters
+        cylinder(double rad_param,double height_param);
+        /*cylinder(double rad_param,double height_param){
             cyli_radius = rad_param;
-        }
-        void Set_cyli_height(double height_param){
             cyli_height = height_param;
-        }
+        }*///we can use this functio like this also bt for thid time we shif it in another cpp file
 
         //function
         double volume(){
             return pi*cyli_radius*cyli_radius*cyli_height;
         }
+    private:
+        //member veriable
+        double cyli_radius {1.0};
+        double cyli_height {1.0};
 };
 
-#endif  //these are the guard for the file to do not overwrite
+#endif  //these are the guard to dont overwrite the code while executing
