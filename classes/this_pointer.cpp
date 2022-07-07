@@ -19,6 +19,9 @@ class cat{
         void set_cat_name(std::string_view name){
             this -> name = name;
         }
+        void set_cat_age(int age){
+            *(this -> p_age) = age;
+        }
         void print_info(){
             std::cout<<"Cat :( "<<this<<" ) name [ "<<name<<" ] age : "<<*p_age<<std::endl;
         }
@@ -29,7 +32,9 @@ class cat{
 
 int main(){
     cat mycat("kitty",2);
+    mycat.print_info();
     mycat.set_cat_name("Chand");
+    mycat.set_cat_age(3);
     mycat.print_info();
     
     return 0;
