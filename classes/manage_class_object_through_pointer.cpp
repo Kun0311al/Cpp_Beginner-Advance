@@ -35,6 +35,12 @@ int main(){
     std::cout<<"volume: "<<(*ptr_cylinder).volume()<<std::endl;
     std::cout<<"volume : "<<ptr_cylinder->volume()<<std::endl;//->this symbol shows the take value from pointer
 
-    return 0;
 
+    //create a new veriable which is store on heap
+    cylinder* ptr_cylinder2 = new cylinder(24,7);//pass the constructor parameter in ptr
+
+    std::cout<<"colume2 : "<<ptr_cylinder2->volume()<<std::endl;
+
+    delete ptr_cylinder2;
+    return 0;
 }
