@@ -16,13 +16,28 @@ class cat{
             delete p_age;
             std::cout<<"destructor called for "<<name<<" at "<<this<<std::endl;
         }
-        void set_cat_name(std::string_view name){
+
+        //setter
+        /*void set_cat_name(std::string_view name){
             this -> name = name;
         }
         void set_cat_age(int age){
             *(this -> p_age) = age;
         }
         void print_info(){
+            std::cout<<"Cat :( "<<this<<" ) name [ "<<name<<" ] age : "<<*p_age<<std::endl;
+        }*/
+
+        //setter by pointer
+        cat* set_cat_name(std::string_view name){
+            this -> name = name;
+            return this;
+        }
+        cat* set_cat_age(int age){
+            *(this -> p_age) = age;
+            return this;
+        }
+        cat* print_info(){
             std::cout<<"Cat :( "<<this<<" ) name [ "<<name<<" ] age : "<<*p_age<<std::endl;
         }
     private:
@@ -33,8 +48,14 @@ class cat{
 int main(){
     cat mycat("kitty",2);
     mycat.print_info();
-    mycat.set_cat_name("Chand");
-    mycat.set_cat_age(3);
+
+    //this is use at the time of void setter
+    // mycat.set_cat_name("Chand");
+    // mycat.set_cat_age(3);
+    // mycat.print_info();
+
+    //this is use at time of pointer setter
+    mycat.set_cat_name("manny")->set_cat_age(4);
     mycat.print_info();
     
     return 0;
