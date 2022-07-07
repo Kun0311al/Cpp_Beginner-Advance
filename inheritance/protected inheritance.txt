@@ -1,0 +1,4 @@
+protected inhertance is use 
+when we use the protected insteed of private then the private member of the class 
+is also accesible for thederived classes.we can change the value of it by derive classes
+and also read the value fron the derive classes then not need to use setter and getter 
