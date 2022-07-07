@@ -28,7 +28,8 @@ class cat{
             std::cout<<"Cat :( "<<this<<" ) name [ "<<name<<" ] age : "<<*p_age<<std::endl;
         }*/
 
-        //setter by pointer
+        //setter by pointer//chained call using pointer
+        /*
         cat* set_cat_name(std::string_view name){
             this -> name = name;
             return this;
@@ -38,6 +39,19 @@ class cat{
             return this;
         }
         cat* print_info(){
+            std::cout<<"Cat :( "<<this<<" ) name [ "<<name<<" ] age : "<<*p_age<<std::endl;
+        }*/
+
+        //chained call using refrence
+        cat& set_cat_name(std::string_view name){
+            this -> name = name;
+            return *this;
+        }
+        cat& set_cat_age(int age){
+            *(this -> p_age) = age;
+            return *this;
+        }
+        cat& print_info(){
             std::cout<<"Cat :( "<<this<<" ) name [ "<<name<<" ] age : "<<*p_age<<std::endl;
         }
     private:
@@ -54,8 +68,14 @@ int main(){
     // mycat.set_cat_age(3);
     // mycat.print_info();
 
-    //this is use at time of pointer setter
+    //change calls using pointers
+    /*
     mycat.set_cat_name("manny")->set_cat_age(4);
+    mycat.print_info();
+    */
+
+    //change calls using refrences
+    mycat.set_cat_name("manny").set_cat_age(4);
     mycat.print_info();
     
     return 0;
