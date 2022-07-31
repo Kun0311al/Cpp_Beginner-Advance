@@ -19,8 +19,12 @@ class kunal{
         }
 };
 int main(){
-    kunal<> K1(3 , 4.3 , 'k');
+    kunal<> K1(3 , 4.3 , 'k');//its use the default parameters 
     K1.display();
+    cout<<endl;
+
+    kunal<float ,char,char> K2(3.3,'k','A');//we declare parameters again
+    K2.display();
 
     return 0;
 }
