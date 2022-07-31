@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-template <class T>
+template <class T>//declaration of the data type of the class as per the code
 class vector{
     public:
         T *arr;
@@ -30,8 +30,8 @@ int main(){
     v2.arr[1] = 5.2;
     v2.arr[2] = 1.3;
     v2.arr[3] = 0;
-    float d = v1.d_product(v2);
-    cout<<d<<endl;
+    float p = v1.d_product(v2);//v1 is the main vector and v2 is the vector with whom the multiplication will happen
+    cout<<p<<endl;
 
     return 0;
 }
