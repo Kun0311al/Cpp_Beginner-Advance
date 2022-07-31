@@ -20,12 +20,12 @@ class vector{
 };
 
 int main(){
-    vector <float> v1(4);
+    vector <float> v1(4);//vector v1 with float data type and the size is 4
     v1.arr[0]= 3.2;
     v1.arr[1] = 2.5;
     v1.arr[2] = 3.5;
     v1.arr[3] = 1.2;
-    vector<float> v2(4);
+    vector<float> v2(4);//vectore v2 with float dat type and the size is 4
     v2.arr[0] = 2.3;
     v2.arr[1] = 5.2;
     v2.arr[2] = 1.3;
