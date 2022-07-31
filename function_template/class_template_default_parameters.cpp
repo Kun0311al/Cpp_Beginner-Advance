@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-template<class T1=int, class T2 = float, class T3 = char>
+template<class T1=int, class T2 = float, class T3 = char>//default parameters 
 class kunal{
     public:
         T1 a;
