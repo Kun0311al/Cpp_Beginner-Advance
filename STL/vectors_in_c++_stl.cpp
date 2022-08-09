@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-void display(vector<int> &v){
+void display(vector<int> &v){//taking the refrence fron the main
     cout<<"all vector element: "<<endl;
     for (int i = 0; i < v.size(); i++)
     {
@@ -20,7 +20,7 @@ int main(){
     {
         cout<<"enter the vector element: "<<endl;
         cin>>ele;
-        vec1.push_back(ele);
+        vec1.push_back(ele);//push_back is use to add the element at the end of the vector
     }
     display(vec1);
     
