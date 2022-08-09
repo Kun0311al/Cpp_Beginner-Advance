@@ -22,6 +22,7 @@ int main(){
         cin>>ele;
         vec1.push_back(ele);//push_back is use to add the element at the end of the vector
     }
+    vec1.pop_back();//pop_back() is use to delete the last element in the vector
     display(vec1);
     
 }
