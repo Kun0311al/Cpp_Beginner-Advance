@@ -29,5 +29,7 @@ int main(){
     vec1.insert(iter, 23);
     display(vec1);
     vec1.insert(iter+2,10);//iter+2 means add the element in the iter + 2 th position in this case the element will add on 3rd position
-    
+    display(vec1);
+
+    return 0;
 }
