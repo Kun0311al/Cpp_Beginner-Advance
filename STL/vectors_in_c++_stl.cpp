@@ -25,8 +25,9 @@ int main(){
     //vec1.pop_back();//pop_back() is use to delete the last element in the vector
 
     display(vec1);
-    vector<int> :: iterator iter = vec1.begin();
+    vector<int> :: iterator iter = vec1.begin();//define the iterator syntex is iterator iteratorname = position
     vec1.insert(iter, 23);
     display(vec1);
+    vec1.insert(iter+2,10);//iter+2 means add the element in the iter + 2 th position in this case the element will add on 3rd position
     
 }
