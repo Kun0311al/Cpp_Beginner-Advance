@@ -7,6 +7,7 @@ void display(vector<int> &v){//taking the refrence fron the main
     for (int i = 0; i < v.size(); i++)
     {
         cout<<v[i]<<" ";
+        cout<<v.at(i)<<" ";
     }
     cout<<endl;
 }
