@@ -43,5 +43,6 @@ int main(){
     display(vec3);
     vector<double> vec4(4,10);//this means the vec4 consist of the 4 10's output is 10 10 10 10..like this 
     display(vec4);
+    
     return 0;
 }
