@@ -30,7 +30,7 @@ int main(){
     display(vec1);
     vec1.insert(iter+2,10);//iter+2 means add the element in the iter + 2 th position in this case the element will add on 3rd position
     display(vec1);
-    vec1.insert(iter+1,4,310);
+    vec1.insert(iter+1,4,310);//adding 310 by 4 times at the position iter+1
     display(vec1);
 
     return 0;
