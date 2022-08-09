@@ -2,7 +2,8 @@
 #include<vector>
 using namespace std;
 
-void display(vector<int> &v){//taking the refrence fron the main
+template <class T>
+void display(vector<T> &v){//taking the refrence fron the main
     cout<<"all vector element: "<<endl;
     for (int i = 0; i < v.size(); i++)
     {
@@ -13,7 +14,7 @@ void display(vector<int> &v){//taking the refrence fron the main
 }
 
 int main(){
-    vector<int> vec1;
+    vector<int> vec1;//zero length integer vector 1st way to make the vector
     int ele,size;
     cout<<"enter the size of the array: "<<endl;
     cin>>size;
@@ -34,5 +35,13 @@ int main(){
     vec1.insert(iter+1,4,310);//adding 310 by 4 times at the position iter+1
     display(vec1);
 
+    //other ways to create the vectors
+    vector<char> vec2(4);//this means the size of the vec2 is 4
+    vec2.push_back(3);
+    display(vec2);
+    vector<char> vec3(vec2);//this means the vec3 is depends on the vec2
+    display(vec3);
+    vector<double> vec4(4,10);//this means the vec4 consist of the 4 10's output is 10 10 10 10..like this 
+    display(vec4);
     return 0;
 }
