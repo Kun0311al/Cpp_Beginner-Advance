@@ -8,7 +8,7 @@ void display(vector<int> &v){//taking the refrence fron the main
     {
         cout<<v[i]<<" ";
     }
-    
+    cout<<endl;
 }
 
 int main(){
@@ -22,7 +22,11 @@ int main(){
         cin>>ele;
         vec1.push_back(ele);//push_back is use to add the element at the end of the vector
     }
-    vec1.pop_back();//pop_back() is use to delete the last element in the vector
+    //vec1.pop_back();//pop_back() is use to delete the last element in the vector
+
+    display(vec1);
+    vector<int> :: iterator iter = vec1.begin();
+    vec1.insert(iter, 23);
     display(vec1);
     
 }
