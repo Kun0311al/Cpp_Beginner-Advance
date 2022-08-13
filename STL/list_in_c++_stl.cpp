@@ -14,6 +14,8 @@ void display(list<int> &lst){
 int main(){
     //list<int> list1;//list of 0 length
     //list<int> list2(7);//empty list of size 7
+
+    //list2 declaration
     list<int> list2;
 
     list2.push_back(3);//add the element fron back
@@ -34,6 +36,7 @@ int main(){
     list2.remove(6);//its remove the 6's from this list
     display(list2);
 
+    //list1 declaration
     list<int> list1(4);
     list<int> :: iterator it;//iterator is like a pointer
     it = list1.begin();
@@ -47,5 +50,15 @@ int main(){
     it++;
     display(list1);
 
+    //sorting the array
+    list2.sort();
+    display(list2);
+    list1.sort();
+
+    //mearge the sorted lists
+    list1.merge(list2);
+    cout<<"after mearging list1: ";
+    display(list1);
+    
     return 0;
 }
