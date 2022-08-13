@@ -59,6 +59,10 @@ int main(){
     list1.merge(list2);
     cout<<"after mearging list1: ";
     display(list1);
-    
+
+    //reverse the list
+    list1.reverse();//arrange the elements in the reverse order
+    display(list1);
+
     return 0;
 }
