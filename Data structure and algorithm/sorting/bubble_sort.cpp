@@ -9,16 +9,18 @@ int main ()
    int a[50]; 
    cout<<"enter the size of array: ";
    cin>>size;
-   
+   //taking array elements
    cout<<"enter the elements of the array: "<<endl;
    for(int b=0;b<size;b++){
     cin>>a[b];
    }
+   //showing the give data
    cout <<"Input list ...\n";
    for(i = 0; i<size; i++) {
       cout <<a[i]<<"\t";
    }
 cout<<endl;
+//sorting
 for(i = 0; i<size; i++) {
    for(j = i+1; j<size; j++)
    {
@@ -30,6 +32,7 @@ for(i = 0; i<size; i++) {
    }
 pass++;
 }
+//giving a sorted array
 cout <<"Sorted Element List ...\n";
 for(i = 0; i<size; i++) {
    cout <<a[i]<<"\t";
