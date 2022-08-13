@@ -21,11 +21,17 @@ int main(){
     list2.push_back(6);
     list2.push_back(8);
     list2.push_back(15);
+    list2.push_back(13);
+    list2.push_back(22);
+    list2.push_back(81);
+    list2.push_back(45);
 
     display(list2);
     list2.pop_back();//delete the element from back
     display(list2);
     list2.pop_front();//delete the element from front
+    display(list2);
+    list2.remove(6);//its remove the 6's from this list
     display(list2);
 
     list<int> list1(4);
