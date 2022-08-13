@@ -50,6 +50,9 @@ int main(){
     it++;
     display(list1);
 
+    //swapping the lists
+    list2.swap(list1);
+
     //sorting the array
     list2.sort();
     display(list2);
