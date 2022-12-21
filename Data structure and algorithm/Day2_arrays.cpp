@@ -23,8 +23,15 @@ void create_array(struct array_1* a, int size_t, int size_u){
     */
 }
 
-
+void show(struct array_1* a){
+    for (int i = 0; i < a->array_used; i++)
+    {
+        cout<<(a->ptr)[i]<<endl;//giving the output of a pointer at i
+    }
+    
+}
 int main(){
     struct array_1 a1;//create a1 object of structure
     create_array(&a1, 50, 15);//call create array function
+    show(&a1);
 }
