@@ -15,6 +15,7 @@ void lin_search(int arr[], int size, int element){
 }
 
 int bin_search(int arr[], int size, int element){
+    //binary searching
     int low, mid, high;
     low = 0;
     high = size-1;
