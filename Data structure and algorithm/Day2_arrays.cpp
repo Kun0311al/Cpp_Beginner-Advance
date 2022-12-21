@@ -22,6 +22,16 @@ void create_array(struct array_1* a, int size_t, int size_u){
     a->ptr = new int(size_t * sizeof(int));
     */
 }
+void add_ele(struct array_1*a){
+    int n;
+    for (int i = 0; i < a->array_used; i++)
+    {
+        cout<<"enter your "<<i<<" element \n";
+        cin>>n;
+        (a->ptr)[i]=n;//set the element i of the array a
+    }
+    
+}
 
 void show(struct array_1* a){
     for (int i = 0; i < a->array_used; i++)
@@ -33,5 +43,7 @@ void show(struct array_1* a){
 int main(){
     struct array_1 a1;//create a1 object of structure
     create_array(&a1, 50, 15);//call create array function
-    show(&a1);
+    add_ele(&a1);//add elements in a1 array
+    cout<<"array elements are\n";
+    show(&a1);// call show function by giving the address of a1
 }
