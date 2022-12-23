@@ -12,7 +12,22 @@ void traverse_list(struct Node* head){
     {
         cout<<ptr->data<<endl;
         ptr = ptr->next;
-    } while (ptr!=head);
+    } while (ptr!=head);//we use do while bcoz our starting value of ptr is itself head so for kickstart we use
+}
+
+//insert the node at first
+struct Node* insert_first(struct Node* head, int value){
+    struct Node* ptr = (struct Node*) malloc(sizeof(struct Node));
+    ptr->data = value;
+    struct Node* p = head->next;
+    while (p->next!=head)
+    {
+        p = p->next;
+    }
+    p->next = ptr;
+    ptr->next = head;
+    head = ptr;    
+    return head;
 }
 
 int main(){
@@ -37,6 +52,9 @@ int main(){
     fifth -> data = 3;
     fifth -> next = head;
 
+    traverse_list(head);
+    cout<<endl;
+    head = insert_first(head, 103);
     traverse_list(head);
     cout<<endl;
 }
