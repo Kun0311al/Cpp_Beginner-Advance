@@ -38,6 +38,7 @@ struct Node* insert_between(struct Node* head, int data, int index){
         i++;
     }
     //connection of new node
+    ptr ->data = data;
     ptr->next = p->next;
     p->next = ptr;  
     return head;  
@@ -60,6 +61,6 @@ int main(){
     traversal_Node(head);
     head=insert_First(head, 10);
     traversal_Node(head);
-    head = insert_between(head, 03, 3);
+    head = insert_between(head, 30, 3);
     traversal_Node(head);
 }
