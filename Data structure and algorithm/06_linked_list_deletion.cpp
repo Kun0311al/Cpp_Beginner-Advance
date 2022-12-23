@@ -66,6 +66,21 @@ struct Node* delete_end(struct Node* head){
 
 }
 
+struct Node* delete_value_node(struct Node* head, int value){
+    struct Node* p = head;
+    struct Node* q = head->next;
+
+    while (q->data!=value)
+    {
+        p = p->next;
+        q = q->next;
+    }
+    p->next = q->next;
+    free(q);
+    return(head);
+    
+}
+
 int main(){
     struct Node* head = (struct Node*) malloc(sizeof(struct Node));
     struct Node* second = (struct Node*) malloc(sizeof(struct Node));
@@ -97,6 +112,9 @@ int main(){
     traverse_list(head);
     cout<<endl;
     head = delete_end(head);
+    traverse_list(head);
+    cout<<endl;
+    head = delete_value_node(head, 3);
     traverse_list(head);
     cout<<endl;
 }
