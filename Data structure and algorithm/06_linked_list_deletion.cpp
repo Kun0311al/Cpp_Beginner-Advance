@@ -16,7 +16,7 @@ void traverse_list(struct Node* ptr){
 struct Node* delete_start(struct Node* head){
     struct Node* ptr = head;
     head = head->next;
-    free(ptr);
+    free(ptr);//free the not required node
     return head;
 }
 
@@ -36,7 +36,7 @@ struct Node* delete_between(struct Node* head, int index){
 
 }
 
-/*alternatine
+/*alternatine for delete between here p if following q
 struct Node* delete_between(struct Node* head, int index){
     struct Node *p = head;
     struct Node *q = head->next;
