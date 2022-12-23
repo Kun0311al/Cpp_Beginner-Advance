@@ -36,6 +36,30 @@ struct Node* delete_between(struct Node* head, int index){
 
 }
 
+/*alternatine
+struct Node* delete_between(struct Node* head, int index){
+    struct Node *p = head;
+    struct Node *q = head->next;
+    for (int i = 0; i < index-1; i++)
+    {
+        p = p->next;
+        q = q->next;
+    }
+    
+    p->next = q->next;
+    free(q);
+    return head;
+}
+*/
+
+struct Node* delete_end(struct Node* head){
+    struct Node* ptr = (struct Node*) malloc(sizeof(struct Node));
+    ptr = head;
+    while(ptr->next!=NULL){
+        ptr = ptr->next;
+    }
+}
+
 int main(){
     struct Node* head = (struct Node*) malloc(sizeof(struct Node));
     struct Node* second = (struct Node*) malloc(sizeof(struct Node));
