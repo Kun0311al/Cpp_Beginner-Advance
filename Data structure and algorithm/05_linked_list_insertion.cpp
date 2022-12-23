@@ -61,6 +61,14 @@ struct Node* insert_end(struct Node* head, int data){
     return head;  
 }
 
+struct Node* insert_after_node(struct Node* head, struct Node* prevnode, int data){
+    struct Node* ptr = (struct Node*)malloc(sizeof(struct Node));
+    ptr->data = data;
+    ptr->next = prevnode->next;
+    prevnode->next = ptr;
+    return head;
+}
+
 int main(){
     struct Node* head = (struct Node*) malloc(sizeof(struct Node));
     struct Node* second = (struct Node*) malloc(sizeof(struct Node));
@@ -84,6 +92,9 @@ int main(){
     traversal_Node(head);
     cout<<endl;
     insert_end(head, 05);
+    traversal_Node(head);
+    cout<<endl;
+    insert_after_node(head, third, 04);
     traversal_Node(head);
     cout<<endl;
 }
