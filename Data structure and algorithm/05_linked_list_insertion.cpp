@@ -44,6 +44,23 @@ struct Node* insert_between(struct Node* head, int data, int index){
     return head;  
 }
 
+//structure function who insert the new node at the end
+struct Node* insert_end(struct Node* head, int data){
+    struct Node* ptr = (struct Node*) malloc(sizeof(struct Node));
+    struct Node* p = head;
+
+    // while the next is not null
+    while (p->next != NULL)
+    {
+        p = p->next;
+    }
+    //connection of new node
+    ptr ->data = data;
+    ptr->next = NULL;
+    p->next = ptr;  
+    return head;  
+}
+
 int main(){
     struct Node* head = (struct Node*) malloc(sizeof(struct Node));
     struct Node* second = (struct Node*) malloc(sizeof(struct Node));
@@ -59,8 +76,14 @@ int main(){
     third -> next = NULL;
 
     traversal_Node(head);
+    cout<<endl;
     head=insert_First(head, 10);
     traversal_Node(head);
+    cout<<endl;
     head = insert_between(head, 30, 3);
     traversal_Node(head);
+    cout<<endl;
+    insert_end(head, 05);
+    traversal_Node(head);
+    cout<<endl;
 }
