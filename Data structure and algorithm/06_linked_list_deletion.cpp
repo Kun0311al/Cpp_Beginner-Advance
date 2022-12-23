@@ -53,11 +53,17 @@ struct Node* delete_between(struct Node* head, int index){
 */
 
 struct Node* delete_end(struct Node* head){
-    struct Node* ptr = (struct Node*) malloc(sizeof(struct Node));
-    ptr = head;
-    while(ptr->next!=NULL){
-        ptr = ptr->next;
+    struct Node* p = head;
+    struct Node* q = head->next;
+    while (q->next!=NULL)
+    {
+        p = p->next;
+        q = q->next;
     }
+    p->next = NULL;
+    free(q);
+    return (head);    
+
 }
 
 int main(){
@@ -88,6 +94,9 @@ int main(){
     traverse_list(head);
     cout<<endl;
     head = delete_between(head, 3);
+    traverse_list(head);
+    cout<<endl;
+    head = delete_end(head);
     traverse_list(head);
     cout<<endl;
 }
