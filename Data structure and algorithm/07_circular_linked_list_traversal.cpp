@@ -6,6 +6,15 @@ struct Node{
     struct Node* next;
 };
 
+void traverse_list(struct Node* head){
+    struct Node* ptr = head;
+    do
+    {
+        cout<<ptr->data<<endl;
+        ptr = ptr->next;
+    } while (ptr!=head);
+}
+
 int main(){
     struct Node* head = (struct Node*) malloc(sizeof(struct Node));
     struct Node* second = (struct Node*) malloc(sizeof(struct Node));
