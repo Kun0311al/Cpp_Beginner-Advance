@@ -59,6 +59,20 @@ struct Node* insert_end(struct Node* head, int value){
     return head;  
 }
 
+struct Node* insert_after_node(struct Node* head, int data, int node){
+    struct Node* ptr = (struct Node*) malloc(sizeof(struct Node));
+    ptr->data = data;
+    struct Node* q = head->next;
+    while (q->data!=node)
+    {
+        q = q->next;
+    }
+    ptr->next = q->next;
+    q->next = ptr;
+    return head;
+
+}
+
 int main(){
     struct Node* head = (struct Node*) malloc(sizeof(struct Node));
     struct Node* second = (struct Node*) malloc(sizeof(struct Node));
@@ -78,7 +92,7 @@ int main(){
     forth -> data = 05;
     forth -> next = fifth;
 
-    fifth -> data = 3;
+    fifth -> data = 30;
     fifth -> next = head;
 
     traverse_list(head);
@@ -90,6 +104,9 @@ int main(){
     traverse_list(head);
     cout<<endl;
     head = insert_between(head, 301, 3);
+    traverse_list(head);
+    cout<<endl;
+    head = insert_after_node(head, 310, 10);
     traverse_list(head);
     cout<<endl;
 }
