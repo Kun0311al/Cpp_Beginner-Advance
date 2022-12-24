@@ -110,3 +110,4 @@ int main(){
     traverse_list(head);
     cout<<endl;
 }
+//deletion in circular linked list is same as the singly linked list do changes acording to it
