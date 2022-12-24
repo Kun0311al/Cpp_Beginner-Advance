@@ -42,3 +42,6 @@ int main(){
     //call traversal function
     travels_list(head);
 }
+
+//doubly link list is same as singly list onlt the node->prev is present ober there 
+//we can also reverse track the doubly linked list
