@@ -41,25 +41,28 @@ int peak(struct stack ary){
 
 }
 
-void push(struct stack ptr, int val){
+int push(struct stack ptr, int val){
     if(isFull(ptr)){
-        printf("Stack Overflow! Cannot push %d to the stack\n", val);
+        cout<<"Stack Overflow! Cannot push to the stack\n";
     }
     else{
         ptr.top++;
         ptr.arr[ptr.top] = val;
     }
+        return ptr.top;
 }
 
 int pop(struct stack ptr){
+    int val;
     if(isEmpty(ptr)){
-        printf("Stack Underflow! Cannot pop from the stack\n");
+        cout<<"Stack Underflow! Cannot pop from the stack\n";
         return -1;
     }
     else{
-        int val = ptr.arr[ptr.top];
+        val = ptr.arr[ptr.top];
         ptr.top--;
-        return val;
+        cout<<"Popped %d from the stack "<<val<<endl;
+        return ptr.top;
     }
 }
  
@@ -70,20 +73,21 @@ int main()
     s.top = -1;
     s.arr = (int *) malloc(s.size * sizeof(int));
   
-    push(s, 23);
-    push(s, 1);
-    push(s, 99);
-    push(s, 75);
-    push(s, 3);
-    push(s, 64);
-    push(s, 57);
-    push(s, 46);
-    push(s, 89);
-    push(s, 6);
+    s.top = push(s, 23);
+    s.top = push(s, 1);
+    s.top = push(s, 99);
+    s.top = push(s, 75);
+    s.top = push(s, 3);
+    s.top = push(s, 64);
+    s.top = push(s, 57);
+    s.top = push(s, 46);
+    s.top = push(s, 89);
+    s.top = push(s, 6);
 
-    printf("Popped %d from the stack\n", pop(s)); // --> Last in first out!
-    printf("Popped %d from the stack\n", pop(s)); // --> Last in first out!
-    printf("Popped %d from the stack\n", pop(s));
+    int val;
+    s.top = pop(s); 
+    s.top = pop(s); 
+    s.top = pop(s);
 
     return 0;
 }
