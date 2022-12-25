@@ -64,6 +64,7 @@ struct Node* isPop(struct Node* head){
     return 0;
 }
 
+//function to take a value of the given position
 struct Node* peek(struct Node* head, int index){
     struct Node* ptr = head;
     for (int i = 0; (i < index && ptr!=NULL); i++)
@@ -76,6 +77,18 @@ struct Node* peek(struct Node* head, int index){
         cout<<"index not found\n";
     }
     return head;
+}
+
+//giving the value of stack top
+int stack_top(struct Node* head){
+    return head->data;
+}
+
+int stack_bottom(struct Node* ptr){
+    while(ptr->next!=NULL){
+        ptr = ptr->next;
+    }
+    return ptr->data;
 }
 
 int main(){
@@ -102,4 +115,9 @@ int main(){
     cout<<endl;
     head = peek(head, 2);
     cout<<endl;
+    int stack_Top = stack_top(head);
+    cout<<stack_Top<<endl;
+    int stack_Bottom = stack_bottom(head);
+    cout<<stack_Bottom<<endl;
 }
+//for stack bottom same do as the tra
