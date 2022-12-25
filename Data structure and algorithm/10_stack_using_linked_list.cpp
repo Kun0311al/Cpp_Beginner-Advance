@@ -47,7 +47,7 @@ struct Node* isPush(struct Node* head, int data){
         head = ptr;
         return head;
     }
-    
+    return 0;
 }
 
 //function to pop the element from the stack
@@ -61,7 +61,21 @@ struct Node* isPop(struct Node* head){
         free(ptr);
         return head;
     }
-    
+    return 0;
+}
+
+struct Node* peek(struct Node* head, int index){
+    struct Node* ptr = head;
+    for (int i = 0; (i < index && ptr!=NULL); i++)
+    {
+        ptr = ptr->next;
+    }
+    if(ptr!=NULL){
+        cout<<ptr->data<<endl;
+    }else{
+        cout<<"index not found\n";
+    }
+    return head;
 }
 
 int main(){
@@ -86,7 +100,6 @@ int main(){
     head = isPop(head);
     traverse_list(head);
     cout<<endl;
+    head = peek(head, 2);
+    cout<<endl;
 }
-
-//peek is same as the delete the value node in linked list only change is dong delete thet node just we have to 
-//give it as the output.
