@@ -6,7 +6,28 @@ struct Node{
     struct Node* next;
 };
 
-//
+//to check the list or stack id enmty or not
+int isEmpty(struct Node* top){
+    if (top==NULL){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+//to check the list or stack is full or not
+int isFull(struct Node* top){
+    struct Node* p = (struct Node*)malloc(sizeof(struct Node));
+    if(p==NULL){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+//for traversing the all list
 void traverse_list(struct Node* ptr){
     while(ptr!=NULL){
         cout<<ptr->data<<endl;
@@ -14,19 +35,33 @@ void traverse_list(struct Node* ptr){
     }
 }
 
+//function to push the new element in the stack
 struct Node* isPush(struct Node* head, int data){
-    struct Node* ptr = (struct Node*) malloc(sizeof(struct Node));
-    ptr->data = data;
-    ptr->next = head;
-    head = ptr;
-    return head;
+    if (isFull(head))
+    {
+        cout<<"stack is overflow\n";
+    }else{
+        struct Node* ptr = (struct Node*) malloc(sizeof(struct Node));
+        ptr->data = data;
+        ptr->next = head;
+        head = ptr;
+        return head;
+    }
+    
 }
 
+//function to pop the element from the stack
 struct Node* isPop(struct Node* head){
-    struct Node* ptr = head;
-    head = head->next;
-    free(ptr);
-    return head;
+    if (isEmpty(head))
+    {
+        cout<<"stack is underflow\n";
+    }else{
+        struct Node* ptr = head;
+        head = head->next;
+        free(ptr);
+        return head;
+    }
+    
 }
 
 int main(){
@@ -52,3 +87,6 @@ int main(){
     traverse_list(head);
     cout<<endl;
 }
+
+//peek is same as the delete the value node in linked list only change is dong delete thet node just we have to 
+//give it as the output.
