@@ -107,5 +107,12 @@ int main()
     val = peek(s, 3);
     cout<<val<<endl;
 
+    //print all elements in the stack
+    for (int i = 0; i < s.top+1; i++)
+    {
+        cout<<s.arr[i]<<endl;
+    }
+    
+
     return 0;
 }
