@@ -65,6 +65,19 @@ int pop(struct stack ptr){
         return ptr.top;
     }
 }
+
+int peek(struct stack ary, int i){
+    if (ary.top-i+1 < 0)
+    {
+        cout<<"stack is underflow\n";
+        return -1;
+    }else
+    {
+        return ary.arr[ary.top-i+1];
+    }
+    
+    
+}
  
 int main()
 {
@@ -88,6 +101,9 @@ int main()
     s.top = pop(s); 
     s.top = pop(s); 
     s.top = pop(s);
+
+    val = peek(s, 3);
+    cout<<val<<endl;
 
     return 0;
 }
