@@ -78,6 +78,15 @@ int peek(struct stack ary, int i){
     
 }
  
+ // to find stack top element
+void stack_top(struct stack ary){
+    cout<<ary.arr[ary.top]<<endl;
+}
+
+//to find stack bottom element
+void stack_bottom(struct stack ary){
+    cout<<ary.arr[0]<<endl;
+}
 int main()
 {
     struct stack s;
@@ -113,6 +122,9 @@ int main()
         cout<<s.arr[i]<<endl;
     }
     
+    //finding stack top and stack bottom
+    stack_top(s);
+    stack_bottom(s);
 
     return 0;
 }
