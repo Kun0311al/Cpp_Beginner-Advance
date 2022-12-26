@@ -8,6 +8,7 @@ struct stack
     char *arr;
 };
  
+//check wether the stack is empty or not
 int isEmpty(struct stack *ptr)
 {
     if (ptr->top == -1)
@@ -19,7 +20,8 @@ int isEmpty(struct stack *ptr)
         return 0;
     }
 }
- 
+
+//check the stack is full or not 
 int isFull(struct stack *ptr)
 {
     if (ptr->top == ptr->size - 1)
@@ -32,6 +34,7 @@ int isFull(struct stack *ptr)
     }
 }
  
+ //pushing new element in stack
 void push(struct stack* ptr, char val){
     if(isFull(ptr)){
         printf("Stack Overflow! Cannot push %d to the stack\n", val);
@@ -42,6 +45,7 @@ void push(struct stack* ptr, char val){
     }
 }
  
+//popping the new element in the stack
 char pop(struct stack* ptr){
     if(isEmpty(ptr)){
         printf("Stack Underflow! Cannot pop from the stack\n");
@@ -53,11 +57,8 @@ char pop(struct stack* ptr){
         return val;
     }
 }
- 
-char stackTop(struct stack* sp){
-    return sp->arr[sp->top];
-}
- 
+
+//check wether the popping element nd new cloasing parenthisis is matching or nor
 int match(char a, char b){
     if(a=='{' && b=='}'){
         return 1;
@@ -70,7 +71,8 @@ int match(char a, char b){
     }
   return 0;  
 }
- 
+
+//functionto check the equation is balanced or not
 int parenthesisMatch(char * exp){
     // Create and initialize the stack
     struct stack* sp;
@@ -81,14 +83,14 @@ int parenthesisMatch(char * exp){
  
     for (int i = 0; exp[i]!='\0'; i++)
     {
-        if(exp[i]=='(' || exp[i]=='{' || exp[i]=='['){
+        if(exp[i]=='(' || exp[i]=='{' || exp[i]=='['){//if any opening bracket is there then push it
             push(sp, exp[i]);
         }
         else if(exp[i]==')'|| exp[i]=='}' || exp[i]==']'){
             if(isEmpty(sp)){
                 return 0;
             }
-            popped_ch = pop(sp);
+            popped_ch = pop(sp);//store the popped element to check with closing bracket
             if(!match(popped_ch, exp[i])){ 
               return 0;  
             }
