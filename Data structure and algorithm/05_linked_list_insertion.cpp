@@ -61,6 +61,7 @@ struct Node* insert_end(struct Node* head, int data){
     return head;  
 }
 
+//insert the node after the given bvalue node
 struct Node* insert_after_node(struct Node* head, struct Node* prevnode, int data){
     struct Node* ptr = (struct Node*)malloc(sizeof(struct Node));
     ptr->data = data;

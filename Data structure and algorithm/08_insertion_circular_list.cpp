@@ -30,6 +30,7 @@ struct Node* insert_first(struct Node* head, int value){
     return head;
 }
 
+//insert the node at given index
 struct Node* insert_between(struct Node* head, int value, int index){
     struct Node* ptr = (struct Node*)malloc(sizeof(struct Node));
     ptr->data = value;
@@ -46,6 +47,7 @@ struct Node* insert_between(struct Node* head, int value, int index){
     
 }
 
+//insert the node at the end
 struct Node* insert_end(struct Node* head, int value){
     struct Node* ptr= (struct Node*) malloc(sizeof(struct Node));
     ptr->data = value;
@@ -59,6 +61,7 @@ struct Node* insert_end(struct Node* head, int value){
     return head;  
 }
 
+//insert the node after the given value node
 struct Node* insert_after_node(struct Node* head, int data, int node){
     struct Node* ptr = (struct Node*) malloc(sizeof(struct Node));
     ptr->data = data;

@@ -13,6 +13,7 @@ void traverse_list(struct Node* ptr){
     }
 }
 
+//delete the first node
 struct Node* delete_start(struct Node* head){
     struct Node* ptr = head;
     head = head->next;
@@ -20,6 +21,7 @@ struct Node* delete_start(struct Node* head){
     return head;
 }
 
+//delete the given index node
 struct Node* delete_between(struct Node* head, int index){
     struct Node* ptr = head;
     int i = 0;
@@ -52,6 +54,7 @@ struct Node* delete_between(struct Node* head, int index){
 }
 */
 
+//delete the end node
 struct Node* delete_end(struct Node* head){
     struct Node* p = head;
     struct Node* q = head->next;
@@ -66,6 +69,7 @@ struct Node* delete_end(struct Node* head){
 
 }
 
+//delete the given value node
 struct Node* delete_value_node(struct Node* head, int value){
     struct Node *p = head;
     struct Node *q = head->next;
