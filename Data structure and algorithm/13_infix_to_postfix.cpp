@@ -2,6 +2,7 @@
 #include<string.h>
 using namespace std;
  
+ //structure of the stack
 struct stack
 {
     int size;
@@ -9,10 +10,12 @@ struct stack
     char *arr;
 };
  
+ //top element of the stack
 int stackTop(struct stack* sp){
     return sp->arr[sp->top];
 }
  
+ //check weather the stack is empty or not
 int isEmpty(struct stack *ptr)
 {
     if (ptr->top == -1)
@@ -25,6 +28,7 @@ int isEmpty(struct stack *ptr)
     }
 }
  
+ //check weather the stack is full or not
 int isFull(struct stack *ptr)
 {
     if (ptr->top == ptr->size - 1)
@@ -37,6 +41,7 @@ int isFull(struct stack *ptr)
     }
 }
  
+ //for pushing the element to the stack
 void push(struct stack* ptr, char val){
     if(isFull(ptr)){
         printf("Stack Overflow! Cannot push %d to the stack\n", val);
@@ -47,6 +52,7 @@ void push(struct stack* ptr, char val){
     }
 }
  
+ //for popping the element from the stack
 char pop(struct stack* ptr){
     if(isEmpty(ptr)){
         printf("Stack Underflow! Cannot pop from the stack\n");
@@ -58,6 +64,8 @@ char pop(struct stack* ptr){
         return val;
     }
 }
+
+//check the preference
 int precedence(char ch){
     if(ch == '*' || ch=='/')
         return 3;
@@ -67,6 +75,7 @@ int precedence(char ch){
         return 0;
 }
  
+ //function to check the ch is operator or not
 int isOperator(char ch){
     if(ch=='+' || ch=='-' ||ch=='*' || ch=='/') 
         return 1;
@@ -78,18 +87,18 @@ char* infixToPostfix(char* infix){
     sp->size = 10; 
     sp->top = -1;
     sp->arr = (char *) malloc(sp->size * sizeof(char));
-    char * postfix = (char *) malloc((strlen(infix)+1) * sizeof(char));
+    char * postfix = (char *) malloc((strlen(infix)+1) * sizeof(char));//this memory for output expression
     int i=0; // Track infix traversal
     int j = 0; // Track postfix addition 
     while (infix[i]!='\0')
     {
-        if(!isOperator(infix[i])){
+        if(!isOperator(infix[i])){//check wether the ith term is operator or not
             postfix[j] = infix[i];
             j++;
             i++;
         }
         else{
-            if(precedence(infix[i])> precedence(stackTop(sp))){
+            if(precedence(infix[i])> precedence(stackTop(sp))){//check their preference
                 push(sp, infix[i]);
                 i++;
             }
@@ -99,7 +108,7 @@ char* infixToPostfix(char* infix){
             }
         }
     }
-    while (!isEmpty(sp))    
+    while (!isEmpty(sp)) //at the end for removing all the elements from the stack   
     {
         postfix[j] = pop(sp);
         j++;
