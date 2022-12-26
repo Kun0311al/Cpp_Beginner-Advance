@@ -48,7 +48,7 @@ char pop(struct stack* ary){
 //function to match the parenthesis
 int parenthisismatch(char* exp){
     //initialising the stack
-    struct stack* s;
+    struct stack* s = (struct stack *) malloc(sizeof(struct stack));
     s->size = 20;
     s->top = -1;
     s->arr = (char*) malloc(s->size*sizeof(char));

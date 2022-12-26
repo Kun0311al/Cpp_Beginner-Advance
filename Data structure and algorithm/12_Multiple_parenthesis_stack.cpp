@@ -75,7 +75,7 @@ int match(char a, char b){
 //functionto check the equation is balanced or not
 int parenthesisMatch(char * exp){
     // Create and initialize the stack
-    struct stack* sp;
+    struct stack* sp = (struct stack *) malloc(sizeof(struct stack));
     sp->size = 100;
     sp->top = -1;
     sp->arr = (char *)malloc(sp->size * sizeof(char));
