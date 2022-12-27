@@ -91,10 +91,10 @@ int main(){
 
     if (!isempty(q))
     {
-        cout<<"list is empty\n";
+        cout<<"\nlist is empty\n";
     }
     if (!isfull(q))
     {
-        cout<<"list is full\n";
+        cout<<"\nlist is full\n";
     }
 }
