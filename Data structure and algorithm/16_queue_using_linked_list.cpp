@@ -31,6 +31,23 @@ void enqueue(struct node* f, struct node* r, int val){
     
 }
 
+int dequeue(struct node* f){
+    struct node* ptr = f;
+    int val;
+    if (f == NULL)
+    {
+        cout<<"queue id empty\n";
+    }
+    else
+    {
+        f = f->next;
+        val = ptr->data;
+        free(ptr);
+    }
+    return val;
+    
+}
+
 int main(){
     struct node* f = NULL;
     struct node* r = NULL;
