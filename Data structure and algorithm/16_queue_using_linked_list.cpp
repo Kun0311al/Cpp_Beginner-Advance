@@ -1,12 +1,16 @@
 #include<iostream>
 using namespace std;
 
+
+struct node* f = NULL;
+struct node* r = NULL;
+
 struct node{
     int data;
     struct node* next;
 };
 
-void enqueue(struct node* f, struct node* r, int val){
+int enqueue(int val){
     struct node* n_node = (struct node*) malloc(sizeof(struct node));
     if (n_node == NULL)
     {
@@ -18,8 +22,7 @@ void enqueue(struct node* f, struct node* r, int val){
         n_node->next = NULL;
         if (f == NULL)
         {
-            f->next = n_node;
-            r->next = n_node;
+            f = r = n_node;
         }
         else
         { 
@@ -28,15 +31,14 @@ void enqueue(struct node* f, struct node* r, int val){
         }
         cout<<"enqueued element: "<<n_node->data<<endl;
     }
-    
 }
 
-int dequeue(struct node* f){
+int dequeue(){
     struct node* ptr = f;
-    int val;
+    int val=-1;
     if (f == NULL)
     {
-        cout<<"queue id empty\n";
+        cout<<"queue is empty\n";
     }
     else
     {
@@ -49,25 +51,23 @@ int dequeue(struct node* f){
 }
 
 int main(){
-    struct node* f = NULL;
-    struct node* r = NULL;
 
-    enqueue(f, r, 10);
-    enqueue(f, r, 3);
-    enqueue(f, r, 16);
-    enqueue(f, r, 4);
+    enqueue(10);
+    enqueue(3);
+    enqueue(16);
+    enqueue(4);
 
     int val;
 
-    val = dequeue(f);
+    val = dequeue();
     cout<<"dequeue element: "<<val<<endl;
-    val = dequeue(f);
+    val = dequeue();
     cout<<"dequeue element: "<<val<<endl;
-    val = dequeue(f);
+    val = dequeue();
     cout<<"dequeue element: "<<val<<endl;
-    val = dequeue(f);
+    val = dequeue();
     cout<<"dequeue element: "<<val<<endl;
 
-    enqueue(f, r, 10);
-    enqueue(f, r, 3);
+    enqueue(10);
+    enqueue(3);
 }
