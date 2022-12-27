@@ -17,6 +17,7 @@ void enqueue(struct queue* ary, int val){
     {
         ary->r = (ary->r+1)%ary->size;
         ary->arr[ary->r] = val;
+        cout<<"enqueue element: "<<val<<endl;
     }
     
 }
