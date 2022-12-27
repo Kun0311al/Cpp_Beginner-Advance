@@ -59,9 +59,8 @@ int dequeue(struct queue* ary){
     {
         ary->f++;//incrementing front pointer
         val = ary->arr[ary->f];//val = deleted value
-        return val;
     }
-    return 0;
+    return val;
 }
 
 int main(){
