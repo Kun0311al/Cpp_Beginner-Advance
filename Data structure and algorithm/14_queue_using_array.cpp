@@ -89,4 +89,12 @@ int main(){
     val = dequeue(q);
     cout<<val;
 
+    if (!isempty(q))
+    {
+        cout<<"list is empty\n";
+    }
+    if (!isfull(q))
+    {
+        cout<<"list is full\n";
+    }
 }
