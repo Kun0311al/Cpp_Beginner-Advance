@@ -44,7 +44,7 @@ int isFull(struct stack *ptr)
  //for pushing the element to the stack
 void push(struct stack* ptr, char val){
     if(isFull(ptr)){
-        printf("Stack Overflow! Cannot push %d to the stack\n", val);
+        cout<<"Stack Overflow! Cannot push to the stack\n"<<val;
     }
     else{
         ptr->top++;
@@ -55,7 +55,7 @@ void push(struct stack* ptr, char val){
  //for popping the element from the stack
 char pop(struct stack* ptr){
     if(isEmpty(ptr)){
-        printf("Stack Underflow! Cannot pop from the stack\n");
+        cout<<"Stack Underflow! Cannot pop from the stack\n";
         return -1;
     }
     else{
@@ -119,6 +119,6 @@ char* infixToPostfix(char* infix){
 int main()
 {
     char *infix = "x-y/z-k*d";
-    printf("postfix is %s", infixToPostfix(infix));
+    cout<<"postfix is "<< infixToPostfix(infix);
     return 0;
 }
