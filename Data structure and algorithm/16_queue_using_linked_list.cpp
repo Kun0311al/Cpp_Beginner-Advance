@@ -26,7 +26,7 @@ void enqueue(struct node* f, struct node* r, int val){
             r->next = n_node;
             r = n_node;
         }
-        
+        cout<<"enqueued element: "<<n_node->data<<endl;
     }
     
 }
@@ -39,4 +39,18 @@ int main(){
     enqueue(f, r, 3);
     enqueue(f, r, 16);
     enqueue(f, r, 4);
+
+    int val;
+
+    val = dequeue(f);
+    cout<<"dequeue element: "<<val<<endl;
+    val = dequeue(f);
+    cout<<"dequeue element: "<<val<<endl;
+    val = dequeue(f);
+    cout<<"dequeue element: "<<val<<endl;
+    val = dequeue(f);
+    cout<<"dequeue element: "<<val<<endl;
+
+    enqueue(f, r, 10);
+    enqueue(f, r, 3);
 }
