@@ -16,9 +16,23 @@ void enqueue(struct queue* ary, int val){
     else
     {
         ary->r = (ary->r+1)%ary->size;
-        ary->r = val;
+        ary->arr[ary->r] = val;
     }
     
+}
+
+int dequeue(struct queue* ary){
+    int val = -1;
+    if (ary->f == ary->r)
+    {
+        cout<<"array is empty\n";
+    }
+    else
+    {
+        ary->f = (ary->f+1)%ary->size;
+        val = ary->arr[ary->f];
+    }
+    return val;
 }
 
 int main(){
@@ -30,4 +44,14 @@ int main(){
     enqueue(q, 10);
     enqueue(q, 3);
     enqueue(q, 16);
+
+    int val;
+    val = dequeue(q);
+    cout<<"dequeued element: "<<val<<endl;
+    val = dequeue(q);
+    cout<<"dequeued element: "<<val<<endl;
+    val = dequeue(q);
+    cout<<"dequeued element: "<<val<<endl;
+    val = dequeue(q);
+    cout<<"dequeued element: "<<val<<endl;
 }
