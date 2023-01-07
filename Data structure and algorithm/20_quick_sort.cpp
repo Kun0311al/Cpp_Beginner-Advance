@@ -52,7 +52,7 @@ void quick_sort(int a[], int low, int high)//take array low and high pointer
 
 int main()
 {
-    int A[] = {3, 5, 2, 13, 12, 3, 2, 13, 45};
+    int a[] = {3, 5, 2, 13, 12, 3, 2, 13, 45};
     // 3, 5, 2, 13, 12, 3, 2, 13, 45
     // 3, 2, 2, 13i, 12, 3j, 5, 13, 45
     // 3, 2, 2, 3j, 12i, 13, 5, 13, 45 --> first call to partition returns 3
