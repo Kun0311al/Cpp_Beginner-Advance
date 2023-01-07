@@ -11,6 +11,7 @@ void print_arr(int* a, int n){
     
 }
 
+//adaptive bubble sort code which saves moves and time behind the sorted array
 //function for bubble sort the array
 void bubble_sort(int *a, int n){
     int sorted = 0;//check the code is sorted or not
