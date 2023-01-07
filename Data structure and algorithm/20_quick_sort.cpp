@@ -45,6 +45,8 @@ void quick_sort(int a[], int low, int high)//take array low and high pointer
     if (low < high)//if the low pointer is less than high then only do
     {
         partition_index = partition(a, low, high);//set partition index at the output of partition function
+        print_arr(a, 9);//for printing the array at every step
+        cout<<endl;
         quick_sort(a, low, partition_index - 1);//new sort which takes array, low and partition index -1 pointer
         quick_sort(a, partition_index + 1, high);//new sort which takes array, partition index +1 and high pointer
     }
