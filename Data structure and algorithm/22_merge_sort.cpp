@@ -13,7 +13,7 @@ void print_arr(int *a, int n)
 // for merging the array
 void merge(int a[], int low, int mid, int high) // it takes array, low mid and high pointers
 {
-    int i, j, k, b[20];
+    int i, j, k, b[high-low+1];
     i = low;     // set i pointer at low
     j = mid + 1; // set j pointer at mid+1
     k = low;     // set k pointer at low
