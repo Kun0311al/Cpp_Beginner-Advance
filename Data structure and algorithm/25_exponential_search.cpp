@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+//function to print elements in array
 void print_arr(int* a, int n){
     for (int i = 0; i < n; i++)
     {
@@ -9,8 +10,9 @@ void print_arr(int* a, int n){
     cout<<endl;
 }
 
+//binary search after getting the range
 int binary_search(int a[], int i, int n, int search){
-    int mid = (i+n)/2;
+    int mid = (i+n)/2;//taking mid
     if (a[mid] == search)
     {
         return mid;
@@ -18,25 +20,27 @@ int binary_search(int a[], int i, int n, int search){
     
     if (search < a[mid])
     {
-        return binary_search(a, i, mid-1, search);
+        return binary_search(a, i, mid-1, search);//againf binary search with new parameters
     }
     if (a[mid] > search)
     {
-        return binary_search(a, mid+1, n, search);
+        return binary_search(a, mid+1, n, search);//againf binary search with new parameters
     }
 }
 
+//actual algorithm of exponential search
 int exponential_search(int a[], int n, int search){
-    if (a[0]== search)
+    if (a[0]== search)//if first element is equal to search
     {
         return 0;
     }
 
-    int i = 1;
-    while (i<n && a[i]<search)
+    int i = 1;//initializing the i
+    while (i<n && a[i]<search)//run till the value of i<n and element at i is less than search
     {
-        i = i*2;
-        return binary_search(a, i/2, min(i, n-1), search);
+        i = i*2;//resizing the array
+        return binary_search(a, i/2, min(i, n-1), search);//i/2 for starting point , min(i, n-1) for ending point
+                                                          //min(i, n-1) use to find the minimum btwn i or n-1
     }
     
     return -1;
@@ -44,8 +48,8 @@ int exponential_search(int a[], int n, int search){
 
 int main(){
     int a[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int n = sizeof(a)/sizeof(a[0]);
-    int search = 3;
+    int n = sizeof(a)/sizeof(a[0]);//length of given array
+    int search = 2;//searching element
 
     print_arr(a, n);
     cout<<endl;
