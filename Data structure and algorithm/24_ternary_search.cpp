@@ -10,6 +10,8 @@ void print_arr(int *a, int n)
     }
 }
 
+//Recursive Implementation of Ternary Search 
+
 // ternary function which takes array, start index, rear index, searching element
 int ternary_search(int a[], int l, int r, int search)
 {
