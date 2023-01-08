@@ -9,49 +9,33 @@ void print_arr(int* a, int n){
     
 }
 
-int ternary(int a[], int mid_1, int mid_2, int l, int r, int search){
-    if (a[mid_1] == search)
+int ternary_search(int a[], int l, int r, int search){
+    if(l<=r)
     {
-        cout<<"index no.: "<<mid_1<<endl;
-    }
-    if (a[mid_2] == search)
-    {
-        cout<<"index no.: "<<mid_2<<endl;
-    }
-    if (search < a[mid_1])
-    {
-        r = mid_1 -1;
-    }
-    if (a[mid_2] < search)
-    {
-        l = mid_2 +1;
-    }
-    else
-    {
-        l = mid_1 +1;
-        r = mid_2 -1;
-    }
-    
-}
+        int mid_1 = l +(r-l)/3;
+        int mid_2 = r -(r-l)/3;
 
-void ternary_search(int a[], int l, int r, int search){
-    int mid_1, mid_2;
-    while(l<r)
-    {
-        mid_1 = l +(r+l)/3;
-        mid_2 = r -(r+l)/3;
-        ternary(a, mid_1, mid_2, l, r, search);
-    }
-    if (l == r)
-    {
-        if (a[l] == search)
+        if (a[mid_1] == search)
         {
-            cout<<"index no.: "<<l<<endl;
+            return mid_1;
         }
-        
+        if (a[mid_2] == search)
+        {
+            return mid_2;
+        }
+        if (search < a[mid_1])
+        {
+            return ternary_search(a, l, mid_1 -1, search);
+        }else if (a[mid_2] < search)
+        {
+            return ternary_search(a, mid_2 +1, r, search);
+        }
+        else
+        {
+            return ternary_search(a, mid_1 +1, mid_2 -1, search);
+        }
     }
-    
-    
+    return -1;
 }
 
 int main(){
@@ -61,5 +45,6 @@ int main(){
 
     print_arr(a, n);
     cout<<endl;
-    ternary_search(a, 0, n-1, search);
-}
+    int p = ternary_search(a, 0, n-1, search);
+    cout<<"index of "<<search<<" is "<<p<<endl;
+}   
