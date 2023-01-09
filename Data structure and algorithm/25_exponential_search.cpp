@@ -11,21 +11,25 @@ void print_arr(int* a, int n){
 }
 
 //binary search after getting the range
-int binary_search(int a[], int i, int n, int search){
-    int mid = (i+n)/2;//taking mid
-    if (a[mid] == search)
+int binary_search(int a[], int i, int r, int search){
+    if (r>=i)//when the start pointer is less than or equal to rear pointer
     {
-        return mid;
+        int mid = (i+r)/2;//taking mid
+        if (a[mid] == search)
+        {
+            return mid;
+        }
+        
+        if (search < a[mid])
+        {
+            return binary_search(a, i, mid-1, search);//againf binary search with new parameters
+        }
+        if (a[mid] > search)
+        {
+            return binary_search(a, mid+1, r, search);//againf binary search with new parameters
+        }
     }
     
-    if (search < a[mid])
-    {
-        return binary_search(a, i, mid-1, search);//againf binary search with new parameters
-    }
-    if (a[mid] > search)
-    {
-        return binary_search(a, mid+1, n, search);//againf binary search with new parameters
-    }
 }
 
 //actual algorithm of exponential search
@@ -36,7 +40,7 @@ int exponential_search(int a[], int n, int search){
     }
 
     int i = 1;//initializing the i
-    while (i<n && a[i]<search)//run till the value of i<n and element at i is less than search
+    while (i<n && a[i]<=search)//run till the value of i<n and element at i is less than or equal to search
     {
         i = i*2;//resizing the array
         return binary_search(a, i/2, min(i, n-1), search);//i/2 for starting point , min(i, n-1) for ending point
