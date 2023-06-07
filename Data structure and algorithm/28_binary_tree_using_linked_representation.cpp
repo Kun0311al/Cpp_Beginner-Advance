@@ -37,6 +37,15 @@ void postorder(struct Node* root){
     }
 }
 
+//this code will give the output for inorder tree
+void inorder(struct Node* root){
+    if(root != NULL){
+        inorder(root->left);
+        cout<<root->data<<endl;
+        inorder(root->right);
+    }
+}
+
 int main(){
     // //construction the root node
     // struct Node *p;
@@ -79,6 +88,8 @@ int main(){
     preorder(p);
     cout<<endl;
     postorder(p);
+    cout<<endl;
+    inorder(p);
     
     return 0;
 }
