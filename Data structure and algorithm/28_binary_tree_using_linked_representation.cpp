@@ -19,6 +19,14 @@ struct Node* create_node(int data){
     return new_Node;
 }
 
+void preorder(struct Node* root){
+    if(root != NULL){
+        cout<<root->data<<endl;
+        preorder(root->left);
+        preorder(root->right);
+    }
+}
+
 int main(){
     // //construction the root node
     // struct Node *p;
@@ -49,10 +57,16 @@ int main(){
     struct  Node* p = create_node(6);
     struct  Node* p1 = create_node(4);
     struct  Node* p2 = create_node(7);
+    struct  Node* p3 = create_node(3);
+    struct  Node* p4 = create_node(5);
 
     //linking node with each other
     p->left = p1;
     p->right = p2;
+    p1->left = p3;
+    p1->right = p4;
+
+    preorder(p);
     
     return 0;
 }
