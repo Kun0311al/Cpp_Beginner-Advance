@@ -19,11 +19,20 @@ struct Node* create_node(int data){
     return new_Node;
 }
 
+//this code will print pre order of the tree
 void preorder(struct Node* root){
     if(root != NULL){
         cout<<root->data<<endl;
         preorder(root->left);
         preorder(root->right);
+    }
+}
+
+void postorder(struct Node* root){
+    if(root != NULL){
+        preorder(root->left);
+        postorder(root->right);
+        cout<<root->data<<endl;
     }
 }
 
@@ -67,6 +76,8 @@ int main(){
     p1->right = p4;
 
     preorder(p);
+    cout<<endl;
+    postorder(p);
     
     return 0;
 }
