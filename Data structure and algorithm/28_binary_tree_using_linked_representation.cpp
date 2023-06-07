@@ -28,9 +28,10 @@ void preorder(struct Node* root){
     }
 }
 
+//this code will print the postorder tree
 void postorder(struct Node* root){
     if(root != NULL){
-        preorder(root->left);
+        postorder(root->left);
         postorder(root->right);
         cout<<root->data<<endl;
     }
