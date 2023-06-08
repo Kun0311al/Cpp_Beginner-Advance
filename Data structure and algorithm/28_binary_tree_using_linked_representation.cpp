@@ -56,7 +56,7 @@ void inorder(struct Node *root)
 
 // function is use to check the tree is binary search tree or not
 int isBST(struct Node *root)
-{
+{   //because of static in recurcive condition the value of prec cannot be different
     static struct Node *prev = NULL; // it holds the prev new root value
     if (root != NULL)
     {
