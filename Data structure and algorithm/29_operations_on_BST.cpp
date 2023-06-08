@@ -56,7 +56,6 @@ struct Node* search_Iter(struct Node* root, int data){
 //insertion of data in BST
 struct Node* insert_Node(struct Node* root, int data){
     struct Node* prev = NULL;
-    struct Node* ptr;
     while(root != NULL){
         prev = root;
         if(data == root->data){
