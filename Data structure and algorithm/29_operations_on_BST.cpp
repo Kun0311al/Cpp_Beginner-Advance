@@ -53,6 +53,29 @@ struct Node* search_Iter(struct Node* root, int data){
     return NULL;
 }
 
+//insertion of data in BST
+struct Node* insert_Node(struct Node* root, int data){
+    struct Node* prev = NULL;
+    struct Node* ptr;
+    while(root != NULL){
+        prev = root;
+        if(data == root->data){
+            return root;
+        }else if(data < root->data){
+            root = root->left;
+        }else{
+            root = root->right;
+        }
+    }
+    if (data < prev->data)
+    {
+        prev->left = create_Node(data);
+    }else{
+        prev->right = create_Node(data);
+    }
+    return root;    
+}
+
 int main()
 {
     struct Node *p = create_Node(6);
@@ -65,6 +88,8 @@ int main()
     p->right = p2;
     p1->left = p3;
     p1->right = p4;
+
+    insert_Node(p, 10);
 
     struct Node* n = search_Data(p, 3);
     if(n != NULL){
