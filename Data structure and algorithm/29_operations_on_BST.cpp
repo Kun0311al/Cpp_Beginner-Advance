@@ -75,6 +75,11 @@ struct Node* insert_Node(struct Node* root, int data){
     return root;    
 }
 
+//delete any data from BST
+struct Node* delete_Data(struct Node* root, int data){
+    
+}
+
 int main()
 {
     struct Node *p = create_Node(6);
