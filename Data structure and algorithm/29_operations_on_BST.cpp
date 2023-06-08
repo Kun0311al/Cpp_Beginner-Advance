@@ -18,6 +18,7 @@ struct Node *create_Node(int data)
     return node;
 }
 
+//Recurcive search Technique
 struct Node *search_Data(struct Node *root, int data)
 {
     if (root == NULL)
@@ -38,6 +39,20 @@ struct Node *search_Data(struct Node *root, int data)
     }
 }
 
+//Iterative method to search in BST
+struct Node* search_Iter(struct Node* root, int data){
+    while(root != NULL){
+        if(root->data == data){
+            return root;
+        }else if(root->data > data){
+            root = root->left;
+        }else{
+            root = root->right;
+        }
+    }
+    return NULL;
+}
+
 int main()
 {
     struct Node *p = create_Node(6);
@@ -53,9 +68,17 @@ int main()
 
     struct Node* n = search_Data(p, 3);
     if(n != NULL){
-        cout<<"Found: "<<n->data<<endl<<"Address: "<<n;
+        cout<<"Found: "<<n->data<<endl<<"Address: "<<n<<endl;
     }else{
-        cout<<"NOT Found.";
+        cout<<"NOT Found."<<endl;
+    }
+
+    cout<<"Iterative output\n";
+    struct Node* n1 = search_Iter(p, 10);
+    if(n1 != NULL){
+        cout<<"Found: "<<n1->data<<endl<<"Address: "<<n1<<endl;
+    }else{
+        cout<<"NOT Found."<<endl;
     }
 
     return 0;
