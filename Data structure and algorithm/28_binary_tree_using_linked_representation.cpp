@@ -46,6 +46,24 @@ void inorder(struct Node* root){
     }
 }
 
+//function is use to check the tree is binary search tree or not
+int isBST(struct Node* root){
+    static struct Node* prev = NULL;
+    if(root!=NULL){
+        if(!isBST(root->left)){
+            return 0;
+        }
+        if(prev!=NULL && root->data <= prev->data){
+            return 0;
+        }
+        prev = root;
+        return isBST(root->right);
+    }
+    else{
+        return 1;
+    }
+}
+
 int main(){
     // //construction the root node
     // struct Node *p;
@@ -90,6 +108,7 @@ int main(){
     postorder(p);
     cout<<endl;
     inorder(p);
+    cout<<endl<<isBST(p)<<endl;
     
     return 0;
 }
