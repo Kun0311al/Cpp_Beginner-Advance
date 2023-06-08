@@ -48,19 +48,19 @@ void inorder(struct Node* root){
 
 //function is use to check the tree is binary search tree or not
 int isBST(struct Node* root){
-    static struct Node* prev = NULL;
+    static struct Node* prev = NULL;//it holds the prev new root value 
     if(root!=NULL){
-        if(!isBST(root->left)){
+        if(!isBST(root->left)){//if the left of root is not bst then return 0
             return 0;
         }
-        if(prev!=NULL && root->data <= prev->data){
+        if(prev!=NULL && root->data <= prev->data){//check weather the prev is not null and prev is greater than root
             return 0;
         }
         prev = root;
         return isBST(root->right);
     }
     else{
-        return 1;
+        return 1;//if there is no node then it is BST by default
     }
 }
 
