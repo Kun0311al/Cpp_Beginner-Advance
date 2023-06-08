@@ -50,7 +50,7 @@ void inorder(struct Node* root){
 int isBST(struct Node* root){
     static struct Node* prev = NULL;//it holds the prev new root value 
     if(root!=NULL){
-        if(!isBST(root->left)){//if the left of root is not bst then return 0
+        if(!isBST(root->left)){//if the left of root is not bst then return 0 (recurcive for left tree)
             return 0;
         }
         if(prev!=NULL && root->data <= prev->data){//check weather the prev is not null and prev is greater than root
