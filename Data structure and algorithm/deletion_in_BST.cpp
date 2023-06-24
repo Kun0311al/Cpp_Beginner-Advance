@@ -1,5 +1,6 @@
-#include<stdio.h>
+#include<iostream>
 #include<malloc.h>
+using namespace std;
  
 struct node{
     int data;
@@ -16,83 +17,11 @@ struct node* createNode(int data){
     return n; // Finally returning the created node
 }
  
-void preOrder(struct  node* root){
-    if(root!=NULL){
-        printf("%d ", root->data);
-        preOrder(root->left);
-        preOrder(root->right);
-    }
-}
- 
-void postOrder(struct  node* root){
-    if(root!=NULL){
-        postOrder(root->left);
-        postOrder(root->right);
-        printf("%d ", root->data);
-    }
-}
- 
 void inOrder(struct  node* root){
     if(root!=NULL){
         inOrder(root->left);
-        printf("%d ", root->data);
+        cout<<root->data;
         inOrder(root->right);
-    }
-}
- 
-int isBST(struct  node* root){
-    static struct node *prev = NULL;
-    if(root!=NULL){
-        if(!isBST(root->left)){
-            return 0;
-        }
-        if(prev!=NULL && root->data <= prev->data){
-            return 0;
-        }
-        prev = root;
-        return isBST(root->right);
-    }
-    else{
-        return 1;
-    }
-}
- 
-struct node * searchIter(struct node* root, int key){
-    while(root!=NULL){
-        if(key == root->data){
-            return root;
-        }
-        else if(key<root->data){
-            root = root->left;
-        }
-        else{
-            root = root->right;
-        }
-    }
-    return NULL;
-}
- 
-void insert(struct node *root, int key){
-    struct node *prev = NULL;
-    while(root!=NULL){
-        prev = root;
-        if(key==root->data){
-            printf("Cannot insert %d, already in BST", key);
-            return;
-        }
-        else if(key<root->data){
-            root = root->left;
-        }
-        else{
-            root = root->right;
-        }
-    }
-    struct node* newN = createNode(key);
-    if(key<prev->data){
-        prev->left = newN;
-    }
-    else{
-        prev->right = newN;
     }
 }
 
@@ -154,7 +83,7 @@ int main(){
     p1->right = p4;
 
     inOrder(p);
-    printf("\n");
+    cout<<endl;
     deleteNode(p, 3);
     inOrder(p);
 
