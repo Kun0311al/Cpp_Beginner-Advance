@@ -75,9 +75,51 @@ struct Node* insert_Node(struct Node* root, int data){
     return root;    
 }
 
-//delete any data from BST
-struct Node* delete_Data(struct Node* root, int data){
-    
+struct Node *inOrderPredecessor(struct Node* root){
+    root = root->left;
+    while (root->right!=NULL)
+    {
+        root = root->right;
+    }
+    return root;
+}
+
+struct Node *deleteNode(struct Node *root, int value){
+
+    struct Node* iPre;
+    if (root == NULL){
+        return NULL;
+    }
+    if (root->left==NULL&&root->right==NULL){
+        free(root);
+        return NULL;
+    }
+
+    //searching for the node to be deleted
+    if (value < root->data){
+        root-> left = deleteNode(root->left,value);
+    }
+    else if (value > root->data){
+        root-> right = deleteNode(root->right,value);
+    }
+    //deletion strategy when the node is found
+    else{
+        iPre = inOrderPredecessor(root);
+        root->data = iPre->data;
+        root->left = deleteNode(root->left, iPre->data);
+    }
+    return root;
+}
+
+// this code will give the output for inorder tree
+void inOrder(struct Node *root)
+{
+    if (root != NULL)
+    {
+        inOrder(root->left);
+        cout << root->data << endl;
+        inOrder(root->right);
+    }
 }
 
 int main()
@@ -109,6 +151,12 @@ int main()
     }else{
         cout<<"NOT Found."<<endl;
     }
+
+
+    inOrder(p);
+    printf("\n");
+    deleteNode(p, 3);
+    inOrder(p);
 
     return 0;
 }
